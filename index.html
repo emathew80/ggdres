@@ -9,7 +9,7 @@
     --bg: #0f1117; --surface: #1a1d27; --surface2: #242836; --border: #2e3347;
     --accent: #6c63ff; --accent2: #00c9a7; --accent3: #ff6b6b; --accent4: #feca57;
     --text: #e4e4e7; --text-muted: #9ca3af; --text-bright: #ffffff;
-    --day1: #6c63ff; --day2: #00c9a7; --day3: #ff6b6b; --day4: #feca57; --day5: #38bdf8;
+    --day1: #6c63ff; --day2: #00c9a7; --day3: #ff6b6b; --day4: #feca57; --day5: #38bdf8; --day6: #c084fc; --day7: #f472b6;
   }
   * { margin:0; padding:0; box-sizing:border-box; }
   body { font-family:'Segoe UI',system-ui,-apple-system,sans-serif; background:var(--bg); color:var(--text); line-height:1.7; overflow-x:hidden; }
@@ -46,14 +46,14 @@
   .day-header{display:flex;align-items:center;gap:16px;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid var(--border);}
   .day-num{width:52px;height:52px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:800;color:#fff;flex-shrink:0;}
   .day-num.d1{background:linear-gradient(135deg,var(--day1),#8b5cf6);} .day-num.d2{background:linear-gradient(135deg,var(--day2),#34d399);}
-  .day-num.d3{background:linear-gradient(135deg,var(--day3),#f97316);} .day-num.d4{background:linear-gradient(135deg,var(--day4),#f59e0b);} .day-num.d5{background:linear-gradient(135deg,var(--day5),#0ea5e9);}
+  .day-num.d3{background:linear-gradient(135deg,var(--day3),#f97316);} .day-num.d4{background:linear-gradient(135deg,var(--day4),#f59e0b);} .day-num.d5{background:linear-gradient(135deg,var(--day5),#0ea5e9);} .day-num.d6{background:linear-gradient(135deg,var(--day6),#a855f7);} .day-num.d7{background:linear-gradient(135deg,var(--day7),#ec4899);}
   .day-info h2{font-size:1.2rem;color:var(--text-bright);} .day-info p{font-size:0.85rem;color:var(--text-muted);}
 
   /* TIME BLOCKS */
   .time-block{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:14px;border-left:3px solid var(--accent);}
-  .time-block.d1{border-left-color:var(--day1);} .time-block.d2{border-left-color:var(--day2);} .time-block.d3{border-left-color:var(--day3);} .time-block.d4{border-left-color:var(--day4);} .time-block.d5{border-left-color:var(--day5);}
+  .time-block.d1{border-left-color:var(--day1);} .time-block.d2{border-left-color:var(--day2);} .time-block.d3{border-left-color:var(--day3);} .time-block.d4{border-left-color:var(--day4);} .time-block.d5{border-left-color:var(--day5);} .time-block.d6{border-left-color:var(--day6);} .time-block.d7{border-left-color:var(--day7);}
   .time-label{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;}
-  .time-block.d1 .time-label{color:var(--day1);} .time-block.d2 .time-label{color:var(--day2);} .time-block.d3 .time-label{color:var(--day3);} .time-block.d4 .time-label{color:var(--day4);} .time-block.d5 .time-label{color:var(--day5);}
+  .time-block.d1 .time-label{color:var(--day1);} .time-block.d2 .time-label{color:var(--day2);} .time-block.d3 .time-label{color:var(--day3);} .time-block.d4 .time-label{color:var(--day4);} .time-block.d5 .time-label{color:var(--day5);} .time-block.d6 .time-label{color:var(--day6);} .time-block.d7 .time-label{color:var(--day7);}
   .time-block h4{color:var(--text-bright);margin-bottom:6px;font-size:1rem;} .time-block p,.time-block li{font-size:0.92rem;}
 
   /* EXPANDABLE */
@@ -122,7 +122,7 @@
   /* PROGRESS */
   .progress-wrap{display:flex;gap:6px;margin:16px 0;}
   .progress-seg{flex:1;height:5px;border-radius:3px;background:var(--border);}
-  .progress-seg.p1{background:var(--day1);} .progress-seg.p2{background:var(--day2);} .progress-seg.p3{background:var(--day3);} .progress-seg.p4{background:var(--day4);} .progress-seg.p5{background:var(--day5);}
+  .progress-seg.p1{background:var(--day1);} .progress-seg.p2{background:var(--day2);} .progress-seg.p3{background:var(--day3);} .progress-seg.p4{background:var(--day4);} .progress-seg.p5{background:var(--day5);} .progress-seg.p6{background:var(--day6);} .progress-seg.p7{background:var(--day7);}
 
   /* TAGS */
   .tag{display:inline-block;padding:2px 9px;border-radius:10px;font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;}
@@ -165,6 +165,8 @@
   <div class="nav-tab" data-tab="day3">Day 3</div>
   <div class="nav-tab" data-tab="day4">Day 4</div>
   <div class="nav-tab" data-tab="day5">Day 5</div>
+  <div class="nav-tab" data-tab="day6">Day 6</div>
+  <div class="nav-tab" data-tab="day7">Day 7</div>
   <div class="nav-tab" data-tab="bridge">Bridge</div>
   <div class="nav-tab" data-tab="flashcards">Flashcards</div>
   <div class="nav-tab" data-tab="checklist">Checklist</div>
@@ -216,7 +218,7 @@
   <div class="card">
     <h3><span class="icon">🗓️</span> 5-Day Schedule (~2.5 hrs/day)</h3>
     <div class="progress-wrap">
-      <div class="progress-seg p1"></div><div class="progress-seg p2"></div><div class="progress-seg p3"></div><div class="progress-seg p4"></div><div class="progress-seg p5"></div>
+      <div class="progress-seg p1"></div><div class="progress-seg p2"></div><div class="progress-seg p3"></div><div class="progress-seg p4"></div><div class="progress-seg p5"></div><div class="progress-seg p6"></div><div class="progress-seg p7"></div>
     </div>
     <table class="compare-table">
       <tr><th style="width:80px;">Day</th><th>Focus</th><th>Time</th><th>Goal</th></tr>
@@ -225,6 +227,8 @@
       <tr><td style="color:var(--day3);font-weight:700;">Day 3</td><td>Healthcare IR & Centene</td><td>~2.5 hrs</td><td>Master HIPAA breach rules, ransomware, Centene history</td></tr>
       <tr><td style="color:var(--day4);font-weight:700;">Day 4</td><td>Mock Interviews & Polish</td><td>~2.5 hrs</td><td>Practice answers, quick-fire fundamentals, refine your narrative</td></tr>
       <tr><td style="color:var(--day5);font-weight:700;">Day 5</td><td>Cloud Security: Azure & AWS</td><td>~5.5 hrs</td><td>Cloud IR, security services, tabletop exercises, CSF 2.0 mapping, 5 CSIRT competencies</td></tr>
+      <tr><td style="color:var(--day6);font-weight:700;">Day 6</td><td>Cyber Counterintelligence & Investigations</td><td>~3 hrs</td><td>Threat intelligence, DFIR, insider threats, eDiscovery, investigations — Round 2 prep</td></tr>
+      <tr><td style="color:var(--day7);font-weight:700;">Day 7</td><td>Interview Strategy for Ian Stewart</td><td>~2.5 hrs</td><td>Practice Q&A, questions to ask, cheat sheet — tailored for Ian Stewart's background</td></tr>
     </table>
   </div>
 </div>
@@ -327,6 +331,25 @@
     <div class="gloss-item"><div class="gloss-term">Write Blocker</div><div class="gloss-full">Forensic Write Blocker</div><div class="gloss-def">Hardware or software device that prevents ANY write operations to storage media during forensic acquisition. Non-negotiable for legal admissibility of digital evidence. Ensures the original evidence is never modified during imaging.</div></div>
     <div class="gloss-item"><div class="gloss-term">FTK Imager</div><div class="gloss-full">Forensic Toolkit Imager</div><div class="gloss-def">A widely used free forensic imaging tool for creating bit-for-bit copies of drives and capturing RAM. Creates forensic images that preserve evidence integrity. Hash verification (SHA-256) confirms image matches original.</div></div>
     <div class="gloss-item"><div class="gloss-term">KQL</div><div class="gloss-full">Kusto Query Language</div><div class="gloss-def">Microsoft Sentinel's query language. Simpler than Splunk's SPL and natively integrates with the Azure/Microsoft 365 ecosystem.</div></div>
+    <div class="gloss-item"><div class="gloss-term">EDRM</div><div class="gloss-full">Electronic Discovery Reference Model</div><div class="gloss-def">The 9-stage framework for eDiscovery: information governance, identification, preservation, collection, processing, review, analysis, production, presentation. Industry standard for litigation support.</div></div>
+    <div class="gloss-item"><div class="gloss-term">eDiscovery</div><div class="gloss-full">Electronic Discovery</div><div class="gloss-def">Process of locating, collecting, and producing electronically stored information (ESI) for litigation, investigations, or regulatory proceedings. Overlaps with digital forensics but focuses on legal outcomes rather than technical investigation.</div></div>
+    <div class="gloss-item"><div class="gloss-term">ESI</div><div class="gloss-full">Electronically Stored Information</div><div class="gloss-def">Any digital data relevant to litigation — emails, documents, databases, chat logs, cloud storage. Must be preserved under legal hold when litigation is reasonably anticipated.</div></div>
+    <div class="gloss-item"><div class="gloss-term">Legal Hold</div><div class="gloss-full">Litigation Hold / Preservation Notice</div><div class="gloss-def">A directive requiring preservation of all potentially relevant evidence when litigation is reasonably anticipated. Suspends normal data retention/deletion policies. Failure to implement can result in sanctions and adverse inferences.</div></div>
+  </div>
+
+  <h3 style="color:var(--accent);margin:20px 0 12px;font-size:1rem;">Counterintelligence & Investigations</h3>
+  <div class="glossary-grid">
+    <div class="gloss-item"><div class="gloss-term">UEBA</div><div class="gloss-full">User &amp; Entity Behavior Analytics</div><div class="gloss-def">Machine learning-based detection of anomalous user and system behavior. Establishes behavioral baselines and alerts on deviations — critical for detecting insider threats that signature-based tools miss.</div></div>
+    <div class="gloss-item"><div class="gloss-term">Diamond Model</div><div class="gloss-full">Diamond Model of Intrusion Analysis</div><div class="gloss-def">Framework for analyzing cyber intrusions across four vertices: adversary, capability, infrastructure, and victim. Useful for attribution and understanding threat actor relationships. Complements MITRE ATT&CK.</div></div>
+    <div class="gloss-item"><div class="gloss-term">Cyber Kill Chain</div><div class="gloss-full">Lockheed Martin Cyber Kill Chain</div><div class="gloss-def">7-phase attack model: reconnaissance → weaponization → delivery → exploitation → installation → command &amp; control → actions on objectives. Helps defenders identify which phase to disrupt.</div></div>
+    <div class="gloss-item"><div class="gloss-term">NITTF</div><div class="gloss-full">National Insider Threat Task Force</div><div class="gloss-def">U.S. government body (co-chaired by FBI and ODNI) that publishes best practices for insider threat programs. Their guidelines are adapted by Fortune 500 companies for corporate insider threat programs.</div></div>
+    <div class="gloss-item"><div class="gloss-term">HC3</div><div class="gloss-full">Health Sector Cybersecurity Coordination Center</div><div class="gloss-def">Part of HHS; coordinates healthcare cybersecurity defense, publishes threat briefs, and provides technical assistance during healthcare cyber incidents. Works alongside CISA and Health-ISAC.</div></div>
+    <div class="gloss-item"><div class="gloss-term">OSINT</div><div class="gloss-full">Open Source Intelligence</div><div class="gloss-def">Intelligence gathered from publicly available sources — news, social media, corporate websites, domain registrations, dark web forums. Used for threat actor profiling and reconnaissance detection.</div></div>
+    <div class="gloss-item"><div class="gloss-term">CTI</div><div class="gloss-full">Cyber Threat Intelligence</div><div class="gloss-def">Actionable intelligence about threats, threat actors, and attack trends that informs defensive posture. Lifecycle: planning → collection → processing → analysis → dissemination → feedback.</div></div>
+    <div class="gloss-item"><div class="gloss-term">Attribution</div><div class="gloss-full">Cyber Attack Attribution</div><div class="gloss-def">Identifying the threat actor behind an attack. Ranges from low-confidence (IoC matching) to high-confidence (law enforcement investigation). Pyramid: IoCs → TTPs → threat actor profile → confirmed attribution.</div></div>
+    <div class="gloss-item"><div class="gloss-term">Qui Tam</div><div class="gloss-full">Whistleblower Lawsuit (False Claims Act)</div><div class="gloss-def">A private individual files a lawsuit on behalf of the government under the False Claims Act. Relevant to Centene: the NIST 800-53 settlement originated from a qui tam action.</div></div>
+    <div class="gloss-item"><div class="gloss-term">FIRST</div><div class="gloss-full">Forum of Incident Response and Security Teams</div><div class="gloss-def">International organization of computer security incident response teams. Centene's Cyber Threat Fusion Center CSIRT is a registered FIRST member, enabling global threat intelligence sharing.</div></div>
+    <div class="gloss-item"><div class="gloss-term">Insider Threat Program</div><div class="gloss-full">Corporate Insider Threat Detection &amp; Response</div><div class="gloss-def">Holistic program combining policies, technical monitoring (UEBA, DLP), HR coordination, legal oversight, and investigation procedures to detect and mitigate malicious, negligent, or compromised insiders.</div></div>
   </div>
 </div>
 
@@ -2250,6 +2273,1363 @@
   </div>
 </div>
 
+
+<\!-- ═══════════════════ DAY 6 & DAY 7 ═══════════════════ -->
+<!-- DAY 6: Cyber Counterintelligence, Threat Operations & Investigations -->
+<div class="section container" id="day6">
+  <div class="day-header">
+    <div class="day-num d6">D6</div>
+    <div class="day-info">
+      <h2>Cyber Counterintelligence, Threat Operations & Investigations</h2>
+      <p>Preparing for Round 2 with Ian Stewart — ~3 hours</p>
+    </div>
+  </div>
+
+  <div class="alert alert-info">
+    <span class="alert-icon">🎯</span>
+    <div>
+      <strong>Round 2 Interview Context:</strong> This day prepares you for your Round 2 interview with Ian Stewart, Senior Director of Cyber Counterintelligence &amp; Investigations. His military intelligence background (U.S. Army Chief Warrant Officer 3), CISSP certification, and progression from CSIRT Lead → Threat Intel Manager → Threat Operations Director → Senior Director means he will probe deep on threat intelligence rigor, forensics discipline, insider threat detection, and investigations strategy. He values precision, evidence-based thinking, and operational discipline. He's used to working in a world where intelligence informs operations, and he expects you to think like an investigator, not just a responder.
+    </div>
+  </div>
+
+  <!-- SESSION 1: Understanding Cyber Counterintelligence -->
+  <div class="time-block d6">
+    <div class="time-label">Session 1 · 45 minutes — Understanding Cyber Counterintelligence</div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>What is Cyber Counterintelligence?</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <p><strong>Corporate vs. Government/Military Definition:</strong></p>
+          <ul>
+            <li><strong>Government/Military CI:</strong> Protecting classified information, detecting foreign intelligence operations, counterespionage. Focus on nation-state adversaries and strategic threats.</li>
+            <li><strong>Corporate Cyber CI:</strong> Protecting intellectual property, competitive intelligence, and sensitive business data from theft, espionage, and unauthorized disclosure. Also includes defending against threat actors conducting reconnaissance for attacks.</li>
+          </ul>
+          <p><strong>In Healthcare (Centene's context):</strong></p>
+          <ul>
+            <li>PHI is a target for resale, blackmail, and competitive advantage</li>
+            <li>Nation-states may target TRICARE-related data (Centene is a TRICARE contractor)</li>
+            <li>Ransomware operators conduct business intelligence before targeting</li>
+            <li>Insiders may steal member data for resale or financial gain</li>
+            <li>CI function monitors both external threats and insider activity</li>
+          </ul>
+          <p><strong>Key Disciplines under Cyber CI:</strong></p>
+          <ul>
+            <li>Threat Intelligence (external threat profiling)</li>
+            <li>Threat Hunting (proactive detection of adversaries)</li>
+            <li>Digital Forensics (evidence extraction and analysis)</li>
+            <li>eDiscovery (litigation support via data discovery)</li>
+            <li>Insider Threat Program (detecting malicious/negligent insiders)</li>
+            <li>Investigations (coordinating evidence gathering for legal/compliance outcomes)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>The Cyber Threat Fusion Center &amp; CSIRT Model</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <p><strong>Centene's "Cyber Threat Fusion Center CSIRT":</strong></p>
+          <ul>
+            <li>Registered with FIRST.org (Forum of Incident Response and Security Teams)</li>
+            <li>Serves as the centralized hub for incident response, threat intelligence, and crisis coordination</li>
+            <li>Acts as the operational nerve center during breaches and cyber incidents</li>
+          </ul>
+          <p><strong>Typical Cyber Threat Fusion Center Structure:</strong></p>
+          <ul>
+            <li><strong>SOC (Security Operations Center):</strong> 24/7 monitoring, alert triage, first-responder to incidents</li>
+            <li><strong>Incident Response Team:</strong> Escalations from SOC, investigation, containment, eradication (Ernest Covell's team)</li>
+            <li><strong>Threat Intelligence Team:</strong> External threat research, threat actor profiling, indicator feeds, strategic briefings</li>
+            <li><strong>Threat Operations/Forensics Team:</strong> Deep-dive investigations, digital evidence collection, chain of custody (Ian Stewart's team)</li>
+            <li><strong>Insider Threat Program:</strong> Behavioral monitoring, anomalous access detection, employee investigations</li>
+          </ul>
+          <p><strong>Information Flow in a Fusion Center:</strong></p>
+          <ul>
+            <li>SOC detects alert → IR team responds → Forensics collects evidence → Threat Intel profiles threat actor → CTI informs future SOC rules → Feedback loop</li>
+            <li>Threat Intel discovers new IoCs → Shares with SOC for detection → IR responds → Forensics analyzes impact → Legal/Compliance engaged as needed</li>
+          </ul>
+          <p><strong>Why "Fusion"?</strong> Integration of data from multiple sources (SIEM logs, endpoint telemetry, threat feeds, DNS logs, email logs, user behavior analytics) into a single decision-making framework.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>How Threat Intelligence, Threat Hunting &amp; IR Integrate</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <p><strong>Threat Intelligence (CTI):</strong> Understanding external threat actors, their motivations, tools, tactics, and typical targets.</p>
+          <ul>
+            <li>Answers: "Who is attacking healthcare? What tools do they use? Which healthcare organizations are they targeting?"</li>
+            <li>Sources: Open-source intelligence (OSINT), commercial feeds, government advisories, threat actor forums, dark web monitoring</li>
+          </ul>
+          <p><strong>Threat Hunting:</strong> Proactive searching for evidence of compromise using threat intelligence and behavioral analysis.</p>
+          <ul>
+            <li>Answers: "Are we currently compromised by APT28? Do we have indicators of known ransomware activity?"</li>
+            <li>Uses threat intel to search for known IoCs, TTPs, and behavioral patterns</li>
+          </ul>
+          <p><strong>Incident Response:</strong> Reactive containment and eradication when a breach is confirmed.</p>
+          <ul>
+            <li>Answers: "We've been hit. How do we stop it, isolate it, and eradicate it?"</li>
+            <li>Uses threat intel to understand the adversary's likely next moves, dwell time patterns, and exfiltration paths</li>
+          </ul>
+          <p><strong>Integration Example at Centene:</strong></p>
+          <ol>
+            <li>Threat Intel team monitors for ransomware groups targeting healthcare (e.g., LockBit analyzing HIPAA breaches)</li>
+            <li>They publish an alert: "LockBit recently added Centene to reconnaissance targets. Watch for brute-force RDP attempts."</li>
+            <li>SOC uses this intel to tighten detection rules for RDP anomalies</li>
+            <li>Threat Hunting team proactively searches for any RDP logon anomalies matching LockBit's known patterns</li>
+            <li>IR team stands by, pre-positioned with containment playbooks for LockBit ransomware</li>
+            <li>When an incident is detected, IR responds using threat intel on LockBit's post-compromise behavior (lateral movement, staging, encryption)</li>
+            <li>Forensics collects evidence; threat intel analyzes artifacts and confirms threat actor attribution</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>Threat Intelligence Lifecycle (CTI Cycle)</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <p><strong>The 6-Stage CTI Lifecycle:</strong></p>
+          <ol>
+            <li><strong>Planning &amp; Direction:</strong> Define intelligence requirements. "What do we need to know?" Examples: "Are there new zero-days in healthcare? What are APT groups targeting our supply chain?"</li>
+            <li><strong>Collection:</strong> Gather raw data. Sources include OSINT (public databases, GitHub, dark web forums), commercial threat feeds, government advisories (CISA), industry ISACs (Health-ISAC for healthcare), partner intelligence sharing.</li>
+            <li><strong>Processing:</strong> Organize and validate raw data. Deduplicate, format into structured threat indicators (IoCs: IPs, domains, file hashes, email addresses), validate against known feeds.</li>
+            <li><strong>Analysis:</strong> Turn data into intelligence. Connect IoCs to threat actors, understand motivations, build threat actor profiles (Diamond Model: adversary, capability, infrastructure, victim). Create threat reports with confidence levels.</li>
+            <li><strong>Dissemination:</strong> Share intelligence with stakeholders. Distribute threat intel feeds to SOC/SIEM, brief IR team on emerging threats, brief C-suite on strategic threats, share with peer organizations (Health-ISAC, FIRST).</li>
+            <li><strong>Feedback:</strong> Consumers of intelligence provide feedback on usefulness. SOC reports: "We used your LockBit IoCs and detected 3 connections." Feedback informs future collection priorities.</li>
+          </ol>
+          <p><strong>Key Insight:</strong> CTI is a cycle, not a linear process. Feedback from responders informs future intelligence collection priorities.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>Types of Threat Actors Targeting Healthcare</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <p><strong>Nation-States &amp; APTs (Advanced Persistent Threats):</strong></p>
+          <ul>
+            <li><strong>Motivation:</strong> Espionage, competitive advantage, military/intelligence gathering. May target healthcare data related to government services (TRICARE) or critical infrastructure.</li>
+            <li><strong>Capability:</strong> High. Sophisticated tools, persistence, stealth, multi-stage attacks.</li>
+            <li><strong>Examples:</strong> APT28 (Russia), APT29 (Russia), Lazarus Group (North Korea)</li>
+            <li><strong>Centene Context:</strong> As a TRICARE contractor managing DoD/VA member data, you're a nation-state target.</li>
+          </ul>
+          <p><strong>Ransomware Operators (Financially Motivated):</strong></p>
+          <ul>
+            <li><strong>Motivation:</strong> Extortion. Encrypt data, demand payment. Healthcare is a high-value target (hospitals/insurers pay quickly to restore patient services).</li>
+            <li><strong>Capability:</strong> Moderate to high. Often use tools from initial access brokers; conduct post-breach reconnaissance before encryption.</li>
+            <li><strong>Examples:</strong> LockBit, BlackCat, Cl0p</li>
+            <li><strong>Operating Model:</strong> Affiliate-based (lease malware to "affiliates" who conduct attacks, ransom operations share revenue)</li>
+          </ul>
+          <p><strong>Hacktivists &amp; Activism Groups:</strong></p>
+          <ul>
+            <li><strong>Motivation:</strong> Political, protest, notoriety. May target healthcare organizations for policy reasons or media attention.</li>
+            <li><strong>Capability:</strong> Low to moderate. Often rely on public tools, vulnerability scanning, defacement.</li>
+            <li><strong>Examples:</strong> Anonymous collective, politically aligned groups</li>
+          </ul>
+          <p><strong>Insiders (Malicious &amp; Negligent):</strong></p>
+          <ul>
+            <li><strong>Motivation:</strong> Financial (selling PHI), revenge, extortion, espionage (foreign governments recruiting employees)</li>
+            <li><strong>Risk:</strong> Incredibly high. Insiders have legitimate access; insider threats account for ~35% of healthcare breaches (vs. 19% across all industries).</li>
+            <li><strong>Negligent:</strong> Accidentally expose data (weak passwords, falling for phishing, misconfigurations)</li>
+          </ul>
+          <p><strong>Competitor Intelligence:</strong></p>
+          <ul>
+            <li><strong>Motivation:</strong> Business intelligence. Competitors may conduct social engineering, supply chain attacks, or insider recruitment to gain market insights.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>Key Threat Intelligence Frameworks</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <p><strong>MITRE ATT&amp;CK Framework:</strong></p>
+          <ul>
+            <li>Comprehensive taxonomy of adversary tactics and techniques based on real-world observations</li>
+            <li>Structure: Tactics (goals, e.g., "Initial Access", "Persistence", "Exfiltration") → Techniques (methods to achieve that tactic)</li>
+            <li>Use case: "Which techniques is LockBit known to use? Let's detect those techniques."</li>
+            <li>Enterprise matrix focuses on corporate attack patterns; healthcare has specialized mappings</li>
+          </ul>
+          <p><strong>Diamond Model of Intrusion Analysis:</strong></p>
+          <ul>
+            <li>Framework for understanding cyber attacks via 4 core elements:</li>
+            <li><strong>Adversary:</strong> Who is attacking? (nation-state, cybercriminal group, insider)</li>
+            <li><strong>Capability:</strong> What tools/techniques do they use? (malware, exploit kits, social engineering)</li>
+            <li><strong>Infrastructure:</strong> What systems do they operate? (C2 servers, botnet hosts, proxies)</li>
+            <li><strong>Victim:</strong> Who are they targeting? (organization, industry, geography)</li>
+            <li>Use case: "We found a suspicious domain. Using Diamond Model: it's part of infrastructure used by [threat actor] to target [similar victims]."</li>
+          </ul>
+          <p><strong>Cyber Kill Chain (Lockheed Martin):</strong></p>
+          <ul>
+            <li>Linear model of attack stages: Reconnaissance → Weaponization → Delivery → Exploitation → Installation → Command &amp; Control → Actions on Objectives</li>
+            <li>Use case: "At what stage in the kill chain was the attacker detected? Earlier detection = better outcome."</li>
+            <li>Note: Assumes linear progression; modern attacks are more iterative, which is why MITRE ATT&amp;CK is more comprehensive</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="video-grid">
+      <a class="video-card" href="https://www.youtube.com/watch?v=Mne1-ZYqBkw" target="_blank">
+        <div class="vc-title">MITRE ATT&amp;CK Framework Explained</div>
+        <div class="vc-source">John Hammond — 27 min</div>
+      </a>
+      <a class="video-card" href="https://www.youtube.com/watch?v=N1eeqHwIECk" target="_blank">
+        <div class="vc-title">Threat Intelligence Fundamentals</div>
+        <div class="vc-source">Security Blue Team — 45 min</div>
+      </a>
+    </div>
+
+    <div class="resource-row">
+      <a class="res-link" href="https://attack.mitre.org" target="_blank">MITRE ATT&amp;CK Framework</a>
+    </div>
+    <div class="resource-row">
+      <a class="res-link" href="https://www.cisa.gov/news-events" target="_blank">CISA Alerts &amp; Advisories</a>
+    </div>
+    <div class="resource-row">
+      <a class="res-link" href="https://www.healthisac.org" target="_blank">Health-ISAC (Healthcare Information Sharing &amp; Analysis Center)</a>
+    </div>
+    <div class="resource-row">
+      <a class="res-link" href="https://www.first.org" target="_blank">FIRST.org — Forum of Incident Response Security Teams</a>
+    </div>
+
+  </div>
+
+  <!-- SESSION 2: Digital Forensics & eDiscovery Deep Dive -->
+  <div class="time-block d6">
+    <div class="time-label">Session 2 · 45 minutes — Digital Forensics &amp; eDiscovery Deep Dive</div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>Digital Forensics Investigation Process</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <p><strong>The 6-Stage Digital Forensics Process:</strong></p>
+          <ol>
+            <li><strong>Identification:</strong> Recognize that evidence exists. "We have a suspected compromise. What systems are potentially involved?"</li>
+            <li><strong>Preservation:</strong> Secure evidence to prevent tampering or loss. Isolate compromised systems from the network, preserve volatile data (RAM, logs), maintain chain of custody documentation.</li>
+            <li><strong>Collection:</strong> Acquire evidence in a forensically sound manner. Bit-by-bit imaging of drives, capturing network traffic, exporting logs. Use write-blockers to prevent accidental modification.</li>
+            <li><strong>Examination:</strong> Process the evidence for analysis. Parse file systems, recover deleted files, extract application data (email, browser history), decode artifacts.</li>
+            <li><strong>Analysis:</strong> Interpret the evidence to answer investigative questions. "What files were accessed? When? By whom? What was exfiltrated?"</li>
+            <li><strong>Reporting:</strong> Document findings in a clear, legally defensible manner. Chain of custody, methodology, findings, conclusions, recommendations for remediation and prevention.</li>
+          </ol>
+          <p><strong>Chain of Custody:</strong> Critical for legal defensibility. Document every person who handles evidence, when, why, and for how long. Maintain integrity hashes to prove evidence wasn't modified.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>eDiscovery vs. Digital Forensics: Differences &amp; Overlaps</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <p><strong>Digital Forensics:</strong></p>
+          <ul>
+            <li><strong>Purpose:</strong> Determine what happened, detect compromise, identify threat actors, support criminal/civil investigations</li>
+            <li><strong>Scope:</strong> Deep technical analysis of systems, files, memory, network artifacts</li>
+            <li><strong>Timeline:</strong> Often urgent (incident response context)</li>
+            <li><strong>Legal Standard:</strong> Evidence for criminal prosecution (high bar: beyond reasonable doubt) or civil litigation</li>
+            <li><strong>Audience:</strong> Law enforcement, attorneys, judges, juries</li>
+          </ul>
+          <p><strong>eDiscovery (Electronic Discovery):</strong></p>
+          <ul>
+            <li><strong>Purpose:</strong> Locate and produce relevant data for litigation or regulatory investigation</li>
+            <li><strong>Scope:</strong> Broader — emails, documents, databases, communications across all custodians and systems</li>
+            <li><strong>Timeline:</strong> Structured, scheduled phases within litigation</li>
+            <li><strong>Legal Standard:</strong> Civil litigation standard (more lenient than criminal; "more likely than not")</li>
+            <li><strong>Audience:</strong> Opposing counsel, courts, regulatory bodies</li>
+          </ul>
+          <p><strong>How They Overlap:</strong></p>
+          <ul>
+            <li>A data breach incident → IR investigation (forensics) AND litigation (eDiscovery)</li>
+            <li>Both require chain of custody, evidence preservation, and legal holds</li>
+            <li>Forensics findings may feed into eDiscovery production (e.g., forensic analysis shows X data was exfiltrated; eDiscovery then locates all instances of X data for production)</li>
+            <li><strong>Healthcare Example:</strong> Centene breach → IR forensics (What happened? Who was breached?) + Patient lawsuit eDiscovery (All data about breach communications, failures, damages) + OCR investigation eDiscovery (All HIPAA-related data)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>EDRM: Electronic Discovery Reference Model</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <p><strong>EDRM is the 9-stage framework for eDiscovery:</strong></p>
+          <ol>
+            <li><strong>Information Governance:</strong> Organizations establish data retention policies, identify custodians and data sources, create litigation hold procedures.</li>
+            <li><strong>Identification:</strong> Identify potentially relevant data. Custodians, systems, date ranges, keywords.</li>
+            <li><strong>Preservation:</strong> Place legal hold on identified data. Prevent deletion or modification. Communicate hold to custodians.</li>
+            <li><strong>Collection:</strong> Gather data from identified sources. Capture emails, files, databases, cloud storage. Maintain chain of custody.</li>
+            <li><strong>Processing:</strong> Convert collected data into searchable, reviewable format. Remove duplicates, extract metadata, de-NIST (remove non-responsive data).</li>
+            <li><strong>Review:</strong> Attorneys and subject matter experts review documents for responsiveness and privilege. Redact privileged information (attorney-client, work product doctrine).</li>
+            <li><strong>Analysis:</strong> Advanced analytics to identify patterns, key documents, relationships. Technology-assisted review (TAR) and machine learning to prioritize review.</li>
+            <li><strong>Production:</strong> Deliver responsive, non-privileged documents to opposing counsel in agreed-upon format with metadata.</li>
+            <li><strong>Presentation:</strong> Present evidence at trial or in settlement negotiations.</li>
+          </ol>
+          <p><strong>Healthcare Implication:</strong> In breach litigation, eDiscovery covers breach notifications, incident response reports, forensic findings, security audit reports, compliance documentation, communications about the breach, and damages information.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>Legal Holds &amp; Evidence Preservation in Healthcare</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <p><strong>What is a Legal Hold?</strong></p>
+          <ul>
+            <li>A directive to preserve all evidence relevant to anticipated or pending litigation/investigation</li>
+            <li>Suspends normal data retention/deletion policies</li>
+            <li>Applies to all people and systems that might have relevant data</li>
+          </ul>
+          <p><strong>Triggers for Legal Hold in Healthcare:</strong></p>
+          <ul>
+            <li>Security breach discovered → hold all incident response, forensic, log data</li>
+            <li>Patient lawsuit filed → hold all communications, business records, security records</li>
+            <li>OCR/state AG investigation announced → hold all HIPAA-relevant records</li>
+            <li>Employee termination for security violation → hold employee email, file access logs, user behavior analytics</li>
+          </ul>
+          <p><strong>Execution:</strong></p>
+          <ul>
+            <li>Legal/Compliance team issues hold notice to custodians and IT</li>
+            <li>IT preserves data: backup critical systems, freeze user accounts, prevent automatic deletion</li>
+            <li>Must document hold notices and compliance (who received notice, when, acknowledgment)</li>
+          </ul>
+          <p><strong>Healthcare-Specific Complexity:</strong></p>
+          <ul>
+            <li>HIPAA requires minimum necessary standard: only disclose PHI to necessary parties. Legal hold must balance evidence preservation with privacy.</li>
+            <li>Business Associate agreements: if BAAs (vendors) hold relevant data, they must honor the legal hold</li>
+            <li>State privacy laws may have restrictions on data retention</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>Forensic Tools Landscape</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <p><strong>Disk &amp; File Forensics:</strong></p>
+          <ul>
+            <li><strong>EnCase (Guidance Software):</strong> Industry standard. Acquires forensic images, analyzes file systems, recovers deleted files. Outputs evidence for litigation.</li>
+            <li><strong>FTK (Forensic Toolkit, AccessData):</strong> Similar capability to EnCase. Strong on disk imaging and file recovery.</li>
+            <li><strong>X-Ways Forensics:</strong> Lightweight, powerful. Preferred by some firms for deep file system analysis.</li>
+            <li><strong>Autopsy / Sleuth Kit:</strong> Open-source. Good for basic disk forensics, file recovery, timeline analysis.</li>
+          </ul>
+          <p><strong>Memory Forensics:</strong></p>
+          <ul>
+            <li><strong>Volatility:</strong> Open-source tool to analyze RAM dumps. Detect running processes, network connections, malware in memory.</li>
+          </ul>
+          <p><strong>Mobile Forensics:</strong></p>
+          <ul>
+            <li><strong>Cellebrite UFED:</strong> Industry standard for mobile device extraction (iOS, Android). Extracts messages, calls, location, app data.</li>
+            <li><strong>Magnet AXIOM:</strong> Multi-device forensics (mobile, computer, cloud). Advanced analytics for timeline construction.</li>
+          </ul>
+          <p><strong>Email &amp; Communications Forensics:</strong></p>
+          <ul>
+            <li>Exchange server forensics: Extract mailbox data, recover deleted emails, analyze message metadata</li>
+            <li>Slack forensics: Export message history, analyze file sharing, detect suspicious communications</li>
+          </ul>
+          <p><strong>Log Analysis &amp; Timeline Construction:</strong></p>
+          <ul>
+            <li>SIEM tools (Centene uses Microsoft Sentinel): Parse logs from endpoints, servers, firewalls, applications</li>
+            <li>Timeline tools: Construct chronological view of attacker activity across multiple systems</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>Cloud Forensics Challenges</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <p><strong>Ephemeral Infrastructure:</strong> Cloud instances and services are temporary. Once deleted, they're gone. Traditional forensic assumptions (preserved disk, file system) don't apply.</p>
+          <ul>
+            <li>Solution: Proactive logging (cloud logging enabled from day 1), rapid incident response before infrastructure is destroyed</li>
+          </ul>
+          <p><strong>Shared Responsibility &amp; Tenancy:</strong> In cloud environments, CSP (Cloud Service Provider) controls underlying infrastructure. Forensics teams have limited direct access to hardware.</p>
+          <ul>
+            <li>Solution: Work with CSP's forensics team, request logs/evidence through CSP, understand CSP's preservation capabilities</li>
+          </ul>
+          <p><strong>Multi-Jurisdiction:</strong> Cloud data may be stored across regions, each with different legal standards for evidence, privacy laws, and data residency requirements.</p>
+          <ul>
+            <li>Solution: Understand data location, consult with legal on jurisdiction-specific evidence handling</li>
+          </ul>
+          <p><strong>Volume &amp; Complexity:</strong> Cloud generates enormous logs. Finding evidence of compromise is like finding a needle in a haystack.</p>
+          <ul>
+            <li>Solution: Advanced analytics, machine learning for anomaly detection, threat hunting in cloud logs</li>
+          </ul>
+          <p><strong>Forensic Tools Limited:</strong> Traditional disk forensics tools don't work on cloud infrastructure. Cloud-native forensics tools are emerging but less mature.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>Healthcare-Specific: PHI in Forensic Evidence &amp; HIPAA</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <p><strong>The Dilemma:</strong> Forensic evidence often includes PHI (names, MRNs, SSNs, health conditions, etc.). But HIPAA restricts who can access PHI.</p>
+          <p><strong>HIPAA Breach Notification Rule:</strong> When PHI is accessed without authorization (breach), organizations must notify affected individuals and regulators (OCR).</p>
+          <ul>
+            <li>Forensic investigations ARE part of breach response. The question: Is viewing forensic evidence a breach?</li>
+          </ul>
+          <p><strong>HIPAA Exceptions:</strong> Authorized uses of PHI include:</p>
+          <ul>
+            <li>Treatment, Payment, Healthcare Operations (TPO)</li>
+            <li>Authorized investigations (law enforcement, internal investigations with proper authorization)</li>
+          </ul>
+          <p><strong>Best Practices for Healthcare Forensics:</strong></p>
+          <ul>
+            <li><strong>Minimize Scope:</strong> Only forensics team and legal need to see full evidence. Others get summarized findings without PHI.</li>
+            <li><strong>De-identify When Possible:</strong> Before sharing findings, remove/redact PHI. Use aggregated data (e.g., "200 records from database XYZ accessed" instead of listing specific patient names).</li>
+            <li><strong>Document Authorization:</strong> Ensure forensic investigation is authorized (e.g., IR response, legal hold for litigation). Document who accessed what and why.</li>
+            <li><strong>Vendor BAAs:</strong> If external forensics firm is engaged, they must sign Business Associate Agreement and be authorized to handle PHI.</li>
+            <li><strong>Breach Notification Calculation:</strong> Forensics may show what data was accessed. Breach determination depends on whether "unauthorized access" occurred and if data was exfiltrated/misused.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="resource-row">
+      <a class="res-link" href="https://www.edrm.net" target="_blank">EDRM (Electronic Discovery Reference Model)</a>
+    </div>
+    <div class="resource-row">
+      <a class="res-link" href="https://www.nist.gov/publications/detail/sp-800-86-guide-integrating-forensic-techniques-incident-response" target="_blank">NIST SP 800-86: Guide to Integrating Forensic Techniques into Incident Response</a>
+    </div>
+    <div class="resource-row">
+      <a class="res-link" href="https://www.hhs.gov/hipaa/for-professionals/breach-notification/index.html" target="_blank">HHS HIPAA Breach Notification Rule</a>
+    </div>
+    <div class="resource-row">
+      <a class="res-link" href="https://www.forensics.nl/index.php/tools/sleuthkit-autopsy/" target="_blank">Sleuth Kit / Autopsy (Open-Source Forensics)</a>
+    </div>
+
+  </div>
+
+  <!-- SESSION 3: Insider Threat Programs -->
+  <div class="time-block d6">
+    <div class="time-label">Session 3 · 45 minutes — Insider Threat Programs</div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>Why Insider Threats Are Critical in Healthcare</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <p><strong>Healthcare Insider Threat Statistics:</strong></p>
+          <ul>
+            <li>~35% of healthcare data breaches involve insiders (vs. 19% across all industries) — Verizon DBIR</li>
+            <li>Average dwell time for insider threats: longer and harder to detect than external threats</li>
+            <li>Most expensive breach category: insiders have legitimate access; when they misuse it, the trust is already broken</li>
+          </ul>
+          <p><strong>Why Healthcare is Vulnerable:</strong></p>
+          <ul>
+            <li><strong>High-value data:</strong> PHI (names, SSNs, health conditions) sells for $50–$1000 per record on dark markets</li>
+            <li><strong>Broad data access:</strong> Nurses, doctors, billing staff, admins need access to member records. Insider snooping is easy (look up celebrity, family member, coworker health info).</li>
+            <li><strong>Regulatory pressure:</strong> Healthcare worker shortage means hiring from diverse backgrounds, turnover is high</li>
+            <li><strong>Complex access controls:</strong> Legacy systems, inherited processes, slow access review cycles</li>
+          </ul>
+          <p><strong>Types of Insider Threats:</strong></p>
+          <ul>
+            <li><strong>Malicious Insiders:</strong> Intentionally steal or sabotage. Sell PHI to competitors, extort organizations, spy for foreign governments.</li>
+            <li><strong>Negligent Insiders:</strong> Accidentally expose data. Weak passwords, fall for phishing, misconfigure systems, leave devices unattended.</li>
+            <li><strong>Compromised Insiders:</strong> External threat actor has infiltrated the insider (phishing, blackmail, forced cooperation). Insider unknowingly aids attacker.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>Building an Insider Threat Program (NITTF Guidelines)</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <p><strong>NITTF: National Insider Threat Task Force</strong> — U.S. government body that published best practices for insider threat programs.</p>
+          <p><strong>Core Components of an Insider Threat Program:</strong></p>
+          <ol>
+            <li><strong>Governance &amp; Leadership:</strong> Executive sponsor (CISO or Chief Risk Officer), insider threat program manager, cross-functional team (Security, HR, Legal, Compliance, IT).</li>
+            <li><strong>Policies &amp; Procedures:</strong> Clear policies on data access, acceptable use, consequences of violations. Procedures for reporting suspicious activity.</li>
+            <li><strong>Risk Assessment:</strong> Identify insider threat risks specific to your organization. Which roles have highest access? Which data is most sensitive? Healthcare → focus on clinical staff access to PHI.</li>
+            <li><strong>Technical Monitoring:</strong> UEBA tools, access logging, Data Loss Prevention (DLP), endpoint detection.</li>
+            <li><strong>Human Resources Integration:</strong> Background checks, reference checks, periodic review of access. HR alerts security when employees are terminated or transferred.</li>
+            <li><strong>Awareness &amp; Training:</strong> Teach employees about insider threats, reporting mechanisms, consequences. Normalize reporting suspicious behavior.</li>
+            <li><strong>Investigation &amp; Response:</strong> Clear process for investigating insider threats (preserve evidence, coordinate with HR/Legal, interview approach).</li>
+            <li><strong>Continuous Improvement:</strong> Review program annually, adjust based on lessons learned.</li>
+          </ol>
+          <p><strong>Key Insight:</strong> Effective insider threat programs are holistic. Technology alone (UEBA) is insufficient; you need HR partnership, clear policies, and investigation capability.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>Technical Indicators of Insider Threats</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <p><strong>Data Access Anomalies:</strong></p>
+          <ul>
+            <li>Accessing records outside job responsibilities (accountant viewing clinical data)</li>
+            <li>Accessing records of celebrities, executives, family members (snooping)</li>
+            <li>High-volume searches of data (e.g., pulling 1000 records instead of typical 5)</li>
+            <li>Accessing data shortly before resignation or termination (pre-departure exfiltration)</li>
+          </ul>
+          <p><strong>Data Exfiltration Signals:</strong></p>
+          <ul>
+            <li>Large file transfers to external USB or cloud storage</li>
+            <li>Uploading data to personal cloud accounts (Dropbox, OneDrive personal)</li>
+            <li>Emailing data to personal email addresses</li>
+            <li>Printing large volumes of confidential documents</li>
+          </ul>
+          <p><strong>Off-Hours Activity:</strong></p>
+          <ul>
+            <li>Access to systems outside normal business hours (especially for non-24/7 roles)</li>
+            <li>Activity shortly before/after resignation announcement</li>
+            <li>Accessing systems from unusual locations or VPNs</li>
+          </ul>
+          <p><strong>System &amp; Account Manipulation:</strong></p>
+          <ul>
+            <li>Creating backup or test accounts, disabling logging, removing audit trails</li>
+            <li>Installing remote access tools or backdoors</li>
+            <li>Attempting privilege escalation</li>
+          </ul>
+          <p><strong>UEBA (User &amp; Entity Behavior Analytics) Tools:</strong></p>
+          <ul>
+            <li>Machine learning models that learn "baseline" behavior, then alert on deviations</li>
+            <li>Examples: Exabeam, Splunk User Behavior Analytics, Microsoft Defender for Identity</li>
+            <li>Useful because not all insider threats have obvious single indicators; UEBA catches patterns</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>Behavioral Indicators of Insider Threats</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <p><strong>Pre-Departure Indicators:</strong></p>
+          <ul>
+            <li>Employee is job hunting (LinkedIn activity, interviews)</li>
+            <li>Announcement of resignation, transfer, or termination</li>
+            <li>Decreased performance or engagement</li>
+            <li>Conflict with management or colleagues</li>
+            <li>Increased access requests before departure (last-minute data gathering)</li>
+          </ul>
+          <p><strong>Disgruntlement Indicators:</strong></p>
+          <ul>
+            <li>Recent negative performance reviews or disciplinary action</li>
+            <li>Disagreement with security policies or restrictions</li>
+            <li>Complaints about compensation or advancement</li>
+            <li>Isolation from team, reduced social interaction</li>
+          </ul>
+          <p><strong>Financial Stress Indicators:</strong></p>
+          <ul>
+            <li>Debt, gambling, or substance abuse issues (detected via HR, background checks)</li>
+            <li>Living beyond means</li>
+            <li>Financial motivation for selling data (e.g., sudden debt after divorce)</li>
+          </ul>
+          <p><strong>Healthcare-Specific Examples:</strong></p>
+          <ul>
+            <li>Nurse looking up records of patients they don't treat (snooping on celebrity, family, coworker)</li>
+            <li>Billing employee accessing clinical records (unusual for their role)</li>
+            <li>Access spike around date of employee's medical appointment or family member's treatment</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>Investigation Process &amp; Legal Considerations</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <p><strong>Insider Threat Investigation Phases:</strong></p>
+          <ol>
+            <li><strong>Initial Assessment:</strong> Identify potential insider threat (technical alerts, behavioral reports, HR feedback). Determine if investigation is warranted.</li>
+            <li><strong>Quiet Investigation:</strong> Collect evidence without alerting subject. Review access logs, data exfiltration history, system activity. Do NOT alert employee yet.</li>
+            <li><strong>Legal/HR Coordination:</strong> Brief Legal and HR (if not already involved). Determine: Is this a security matter? A conduct matter? A termination candidate?</li>
+            <li><strong>Evidence Preservation:</strong> Preserve employee's email, file access, system activity. Coordinate with IT to ensure logs aren't overwritten.</li>
+            <li><strong>Subject Interview:</strong> If sufficient evidence exists, conduct interview. Approach: "We've identified some activity in your account. Can you explain?" Allow employee to respond. Document response.</li>
+            <li><strong>Outcome &amp; Remediation:</strong> Determine findings: confirmed malicious insider, negligent behavior, misunderstanding. Outcome: discipline/termination, additional training, system changes to prevent recurrence.</li>
+          </ol>
+          <p><strong>Protecting Employee Rights:</strong></p>
+          <ul>
+            <li><strong>Union Considerations:</strong> If employee is unionized, union rep may be entitled to be present during interview. Consult HR/Legal.</li>
+            <li><strong>Privacy Laws:</strong> State laws vary on employer monitoring. Some states require consent for electronic monitoring.</li>
+            <li><strong>At-Will Employment:</strong> In most U.S. states, employers can terminate at-will (without cause). But termination must not violate other laws (discrimination, retaliation for reporting safety violations, etc.).</li>
+            <li><strong>Documentation:</strong> Document all investigation findings, interviews, decisions, and outcomes. In case of wrongful termination lawsuit, documentation is crucial.</li>
+          </ul>
+          <p><strong>Healthcare-Specific Legal Risks:</strong></p>
+          <ul>
+            <li><strong>Defamation:</strong> Calling someone a "data thief" without proof could lead to defamation suit. Stick to facts.</li>
+            <li><strong>HIPAA Retaliation:</strong> If employee is terminated for reporting HIPAA violations (whistleblower), they can sue for retaliation.</li>
+            <li><strong>Disability Discrimination:</strong> If employee has documented disability (PTSD, depression), termination based on behavioral indicators could be viewed as disability discrimination.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="resource-row">
+      <a class="res-link" href="https://www.dni.gov/index.php/what-we-do/inside-the-ic/oversight-and-accountability/insider-threat-program-fact-sheet" target="_blank">NITTF Insider Threat Program Guidelines</a>
+    </div>
+    <div class="resource-row">
+      <a class="res-link" href="https://www.exabeam.com/insider-threat/" target="_blank">Exabeam: User Behavior Analytics (UEBA)</a>
+    </div>
+    <div class="resource-row">
+      <a class="res-link" href="https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/access-management/index.html" target="_blank">HHS HIPAA: Access Management &amp; Minimum Necessary</a>
+    </div>
+    <div class="resource-row">
+      <a class="res-link" href="https://www.sans.org/white-papers/insider-threat-program-building-a-robust-insider-threat-program/" target="_blank">SANS: Building a Robust Insider Threat Program</a>
+    </div>
+
+  </div>
+
+  <!-- SESSION 4: Investigations & Evidence Management -->
+  <div class="time-block d6">
+    <div class="time-label">Session 4 · 45 minutes — Investigations &amp; Evidence Management</div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>Cyber Investigations vs. Incident Response</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <p><strong>Incident Response (Ernest Covell's domain):</strong></p>
+          <ul>
+            <li><strong>Goal:</strong> Contain and eradicate the threat. Restore normal operations.</li>
+            <li><strong>Timeline:</strong> Hours to days. Speed is paramount.</li>
+            <li><strong>Evidence Standard:</strong> Balance between evidence preservation and operational urgency. "Good enough" evidence to support remediation decisions.</li>
+            <li><strong>Audience:</strong> Internal stakeholders (management, board, legal, customers).</li>
+            <li><strong>Success Metric:</strong> Threat eliminated, systems restored, damage minimized.</li>
+          </ul>
+          <p><strong>Cyber Investigations (Ian Stewart's domain):</strong></p>
+          <ul>
+            <li><strong>Goal:</strong> Determine what happened, attribute threat actor, support legal/regulatory outcomes.</li>
+            <li><strong>Timeline:</strong> Weeks to months. Thoroughness is paramount.</li>
+            <li><strong>Evidence Standard:</strong> Legal standard of evidence. For criminal prosecution: beyond reasonable doubt. For civil litigation: preponderance of evidence (more likely than not).</li>
+            <li><strong>Audience:</strong> Law enforcement, attorneys, judges, juries, regulators (OCR, state AGs).</li>
+            <li><strong>Success Metric:</strong> Evidence admissible in court, threat actor identified/prosecuted, civil/regulatory liability minimized.</li>
+          </ul>
+          <p><strong>Centene Scenario:</strong> A ransomware breach occurs.</p>
+          <ul>
+            <li><strong>IR Team (Day 1-5):</strong> Contain ransomware, preserve infected systems for forensics, identify compromised data.</li>
+            <li><strong>Investigations Team (Day 2+, parallel):</strong> Begin deep forensics, identify threat actor (LockBit? REvil?), understand attack vector, gather evidence for law enforcement report.</li>
+            <li><strong>Overlap:</strong> Both need preserved evidence, chain of custody, and forensic rigor.</li>
+            <li><strong>Divergence:</strong> IR prioritizes operational recovery. Investigations prioritizes evidence that will withstand legal scrutiny.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>Working with Law Enforcement</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <p><strong>Key U.S. Law Enforcement Agencies for Cyber:</strong></p>
+          <ul>
+            <li><strong>FBI (Federal Bureau of Investigation):</strong> Primary agency for cyber espionage, ransomware, data breaches. Has field offices in all major cities. Investigate federal crimes (wire fraud, identity theft, etc.).</li>
+            <li><strong>Secret Service:</strong> Focuses on financial crimes, payment card fraud, and certain cyber crimes. Also responsible for protection of critical infrastructure.</li>
+            <li><strong>HC3 (Health Sector Cybersecurity Coordination Center):</strong> Part of CISA. Focused on healthcare sector. Coordinates healthcare cyber defense, shares threat intelligence, assists with breach investigations.</li>
+            <li><strong>State AGs:</strong> Handle state-level crimes, data breaches, consumer protection violations.</li>
+          </ul>
+          <p><strong>When to Report to Law Enforcement:</strong></p>
+          <ul>
+            <li>Confirmed ransomware attack (likely extortion)</li>
+            <li>APT/nation-state compromise (federal crime)</li>
+            <li>Insider with criminal intent (theft, espionage)</li>
+            <li>Large-scale data breach (potential wire fraud, identity theft)</li>
+          </ul>
+          <p><strong>Engagement Process:</strong></p>
+          <ol>
+            <li>Initial contact with local FBI or Secret Service field office (or HC3 for healthcare)</li>
+            <li>Provide initial incident details, timeline, estimated impact</li>
+            <li>FBI assigns case agent; may request full forensic report once available</li>
+            <li>Coordinate: Law enforcement shares intelligence (threat actor info, attribution, previous victims)</li>
+            <li>Organization provides evidence (forensic images, logs, malware samples)</li>
+            <li>FBI may coordinate with international partners (Interpol, foreign police) if foreign threat actor</li>
+          </ol>
+          <p><strong>Key Consideration:</strong> Sharing information with law enforcement does NOT preclude civil lawsuits or regulatory investigations. All three can proceed in parallel.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>Evidence Handling: Chain of Custody &amp; Forensic Integrity</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <p><strong>Chain of Custody (CoC):</strong> Documentation of every person who handles evidence, when, why, and for how long. Proves evidence wasn't tampered with.</p>
+          <p><strong>Chain of Custody Documentation:</strong></p>
+          <ul>
+            <li>Date/time of evidence collection</li>
+            <li>Description of evidence (e.g., "Seized hard drive from server XYZ, Dell enterprise drive, S/N 12345")</li>
+            <li>Collecting person's name, signature, title</li>
+            <li>Storage location (locked evidence room, climate controlled)</li>
+            <li>Every person who accesses evidence: name, date, time, purpose, signature</li>
+            <li>Evidence condition seals (if disk is sealed in evidence bag and resealed, that's documented)</li>
+          </ul>
+          <p><strong>Write Blockers &amp; Forensic Imaging:</strong></p>
+          <ul>
+            <li><strong>Write Blocker:</strong> Hardware device that sits between evidence drive and forensic workstation. Prevents any writes to the evidence drive. Critical for maintaining forensic integrity.</li>
+            <li><strong>Forensic Image:</strong> Bit-by-bit copy of entire drive. Includes all data, deleted data, unallocated space.</li>
+            <li><strong>Hashing:</strong> MD5 or SHA-256 hash of evidence proves it hasn't been modified. Hash is documented in CoC.</li>
+            <li><strong>Process:</strong> Evidence drive connected via write blocker → forensic image acquired on clean drive → hash of both compared (must match)</li>
+          </ul>
+          <p><strong>Forensic Workstation Hygiene:</strong></p>
+          <ul>
+            <li>Dedicated forensic machine (not general IT equipment)</li>
+            <li>Clean OS, no internet connection (air-gapped)</li>
+            <li>Only authorized forensic tools installed</li>
+            <li>All analysis logged and documented</li>
+          </ul>
+          <p><strong>Why This Matters in Court:</strong> If chain of custody is broken (e.g., evidence handled by unauthorized person, not documented, hash doesn't match), opposing counsel can argue evidence is tainted or unreliable. Judge may exclude the evidence entirely.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>Investigation Documentation &amp; Legal Reporting</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <p><strong>Forensic Report Structure:</strong></p>
+          <ol>
+            <li><strong>Executive Summary:</strong> High-level findings for non-technical audience (lawyers, executives). What happened, who was affected, key conclusions.</li>
+            <li><strong>Scope &amp; Methodology:</strong> What systems were analyzed, what tools were used, any limitations or assumptions.</li>
+            <li><strong>Findings:</strong> Detailed technical findings. Timeline of attacker activity, files accessed/exfiltrated, malware artifacts, command history.</li>
+            <li><strong>Analysis &amp; Conclusions:</strong> Interpretation of findings. Threat actor attribution (if possible), impact assessment, recommendations.</li>
+            <li><strong>Appendices:</strong> Detailed logs, screenshots, technical artifacts, chain of custody documentation.</li>
+          </ol>
+          <p><strong>Tone &amp; Language:</strong></p>
+          <ul>
+            <li>Objective, factual language. "Evidence indicates..." vs. "Attacker clearly...". Avoid speculation without supporting evidence.</li>
+            <li>Distinguish between fact and inference. "The attacker accessed file X.xlsx" (fact) vs. "The attacker likely exfiltrated sensitive data" (inference based on evidence).</li>
+            <li>Confidence levels: "With high confidence..." for strong evidence, "With moderate confidence..." for partial evidence.</li>
+            <li>Avoid inflammatory language that might harm defendant in court or exaggerate impact.</li>
+          </ul>
+          <p><strong>Expert Witness Readiness:</strong></p>
+          <ul>
+            <li>Forensic examiner must be prepared to testify in court</li>
+            <li>Certification (GCFE, EnCE) strengthens credibility</li>
+            <li>Must be able to explain methodology and findings to non-technical jury</li>
+            <li>Must be able to defend methodology and findings against opposing expert</li>
+          </ul>
+          <p><strong>Privilege Considerations:</strong></p>
+          <ul>
+            <li>Forensic report prepared at direction of attorney = attorney-client privileged (in-house counsel or external counsel)</li>
+            <li>If prepared by Security team without attorney direction = not privileged, can be subpoenaed</li>
+            <li>Healthcare: HIPAA minimum necessary applies. Don't include unnecessary PHI in report.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>Coordinating with Legal, HR, Compliance &amp; Privacy</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <p><strong>Legal:</strong></p>
+          <ul>
+            <li>Advises on evidence preservation, chain of custody, legal privilege</li>
+            <li>Coordinates with law enforcement (FBI, state AG)</li>
+            <li>Handles civil litigation if breach leads to lawsuits (customers, partners)</li>
+            <li>Reviews forensic report for privilege, accuracy, legal implications</li>
+          </ul>
+          <p><strong>HR (in case of insider threat investigation):</strong></p>
+          <ul>
+            <li>Provides background on employee (performance history, complaints, access level)</li>
+            <li>Coordinates with employee during investigation interview</li>
+            <li>Executes disciplinary action or termination if findings warrant</li>
+            <li>Ensures investigation doesn't violate employment law (union rights, disability accommodations, etc.)</li>
+          </ul>
+          <p><strong>Compliance (including HIPAA Officer):</strong></p>
+          <ul>
+            <li>Determines if breach qualifies under HIPAA Breach Notification Rule (>500 residents affected)</li>
+            <li>Calculates breach notice requirements (individual notifications, media notification, OCR notification)</li>
+            <li>Prepares documentation for OCR investigation (if breach reported)</li>
+            <li>Coordinates with state AGs on state breach notification laws</li>
+          </ul>
+          <p><strong>Privacy Officer (HIPAA DPO):</strong></p>
+          <ul>
+            <li>Determines what PHI was accessed/exfiltrated</li>
+            <li>Assesses "business associate" questions (was BAA in place? Was vendor at fault?)</li>
+            <li>Advises on minimum necessary principle in forensic evidence handling</li>
+            <li>Coordinates with Privacy Team to prepare privacy breach notice</li>
+          </ul>
+          <p><strong>Centene Scenario — Cross-Functional Investigation:</strong></p>
+          <ul>
+            <li><strong>Day 1:</strong> Breach detected. Security notifies Legal, Compliance, Privacy, HR.</li>
+            <li><strong>Day 2:</strong> IR team (Ernest's team) contains threat. Investigations team (Ian's team) begins forensics. Legal places legal hold on evidence. Compliance begins tracking impact. Privacy assesses PHI exposure.</li>
+            <li><strong>Day 5:</strong> Preliminary forensics complete. Threat actor identified as LockBit. Impact: ~1.2M members' PHI at risk.</li>
+            <li><strong>Day 7:</strong> Compliance determines breach notification required. Legal contacts FBI. Privacy prepares breach notice.</li>
+            <li><strong>Day 14:</strong> Forensic report complete. Legal reviews for privilege, admissibility. Report shared with FBI, OCR (per breach notification).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>Attribution Challenges &amp; When to Engage External Forensics</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <p><strong>Attribution Pyramid (from low to high confidence):</strong></p>
+          <ol>
+            <li><strong>Indicators of Compromise (IoCs):</strong> IP addresses, domains, file hashes, email addresses. Lowest confidence. "This malware was seen before," but doesn't confirm threat actor identity.</li>
+            <li><strong>Tactics, Techniques, Procedures (TTPs):</strong> Behavioral patterns. "Attack used DLL injection and lateral movement via SMB," "Attacker accessed system during business hours." More reliable than IoCs (harder to fake).</li>
+            <li><strong>Threat Actor Profile:</strong> Combine TTPs, tools, targets, language. "This attack matches LockBit's typical patterns: fast encryption, double-extortion demands, targets in healthcare."</li>
+            <li><strong>Attribution with High Confidence:</strong> Rare. Requires multiple independent sources of evidence, or direct attribution from law enforcement.</li>
+          </ol>
+          <p><strong>Why Attribution is Hard:</strong></p>
+          <ul>
+            <li>Threat actors intentionally use tools/infrastructure of other groups to confuse attribution (false flagging)</li>
+            <li>Cybercriminals buy access from other groups (affiliate model), making it hard to attribute initial compromise to final actor</li>
+            <li>IoCs change constantly; today's indicators are outdated tomorrow</li>
+            <li>Multiple threat actors may have similar TTPs</li>
+          </ul>
+          <p><strong>When to Engage External Forensics Firm:</strong></p>
+          <ul>
+            <li><strong>Scope too large:</strong> Investigation exceeds in-house forensics team capacity (thousands of systems, complex infrastructure)</li>
+            <li><strong>Expertise gap:</strong> Breach involves unfamiliar technology (industrial control systems, blockchain, specialized cloud platforms)</li>
+            <li><strong>Law enforcement coordination:</strong> FBI may request retainer with Mandiant, CrowdStrike, or other major firm for coordination</li>
+            <li><strong>Litigation support:</strong> External firm provides expert witness for court, adds credibility</li>
+            <li><strong>Speed required:</strong> External firm has more resources for rapid investigation</li>
+          </ul>
+          <p><strong>Cost-Benefit:</strong> External forensics is expensive ($500–$2000/hour). Weigh against investigation timeline, litigation risk, and regulatory pressure. Insurance may cover some costs.</p>
+          <p><strong>Healthcare-Specific Attribution Notes:</strong></p>
+          <ul>
+            <li>Ransomware operators targeting healthcare often post victim data on leak sites (dark web)</li>
+            <li>Attribution may come from ransom demand (threat actors sometimes identify themselves in demand note)</li>
+            <li>Healthcare Information Sharing & Analysis Center (Health-ISAC) may have threat intelligence on active campaigns</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>Healthcare-Specific: OCR Investigations, State AGs, Qui Tam Cases</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <p><strong>OCR (Office for Civil Rights) Investigations:</strong></p>
+          <ul>
+            <li>Part of HHS. Investigates HIPAA violations and data breaches.</li>
+            <li>Triggered by breach notification (if 500+ residents affected) or complaint</li>
+            <li>OCR may conduct examination: interviews, document requests, system reviews</li>
+            <li>Potential penalties: civil money penalties (up to $1.5M per violation category per year), corrective action plans</li>
+            <li><strong>Centene precedent:</strong> $11.2M False Claims Act settlement in 2022 for NIST 800-53 non-compliance</li>
+          </ul>
+          <p><strong>State Attorney General Investigations:</strong></p>
+          <ul>
+            <li>State-level law enforcement. Investigate data breaches, consumer protection violations.</li>
+            <li>May pursue separate investigation from OCR</li>
+            <li>Some states have strict breach notification timelines (California: 30 days)</li>
+            <li>State laws vary on what triggers notification requirement (some require any unauthorized access; others require "reasonable belief" of misuse)</li>
+          </ul>
+          <p><strong>Qui Tam Cases (False Claims Act):</strong></p>
+          <ul>
+            <li>Private whistleblower lawsuits under the False Claims Act (31 USC § 3729)</li>
+            <li>Whistleblower (employee, contractor, competitor) can sue on behalf of government</li>
+            <li>Claims: Government contractor violated laws (HIPAA, security requirements, contract terms), government paid False Claims</li>
+            <li><strong>Example:</strong> "Centene accepted TRICARE contracts while violating NIST 800-53 security controls. Government unknowingly paid for services it shouldn't have received."</li>
+            <li>If successful, whistleblower gets % of recovery (15-30%)</li>
+            <li><strong>Centene's 2022 settlement:</strong> Likely resulted from qui tam case related to pre-existing HIPAA/security issues</li>
+          </ul>
+          <p><strong>Investigation Coordination in Healthcare:</strong></p>
+          <ul>
+            <li>OCR investigation happens in parallel with internal forensics</li>
+            <li>Organization provides forensic findings, remediation plans, security assessments to OCR</li>
+            <li>OCR may request corrective action plan (CAP): timeline to fix vulnerabilities</li>
+            <li>Failing to cooperate with OCR = additional penalties</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="resource-row">
+      <a class="res-link" href="https://www.fbi.gov/investigate/cyber" target="_blank">FBI Cyber Division</a>
+    </div>
+    <div class="resource-row">
+      <a class="res-link" href="https://www.hhs.gov/hipaa/for-professionals/breach-notification/index.html" target="_blank">HHS HIPAA Breach Notification Rule</a>
+    </div>
+    <div class="resource-row">
+      <a class="res-link" href="https://www.cisa.gov/healthcare" target="_blank">CISA Healthcare Cybersecurity</a>
+    </div>
+    <div class="resource-row">
+      <a class="res-link" href="https://www.justice.gov/civil/false-claims-act" target="_blank">U.S. Justice Department: False Claims Act</a>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- DAY 7: Interview Strategy for Ian Stewart -->
+<div class="section container" id="day7">
+  <div class="day-header">
+    <div class="day-num d7">D7</div>
+    <div class="day-info">
+      <h2>Interview Strategy for Ian Stewart</h2>
+      <p>Mastering Round 2 with Centene's Cyber Counterintelligence &amp; Investigations Leader — ~2.5 hours</p>
+    </div>
+  </div>
+
+  <div class="alert alert-info">
+    <span class="alert-icon">🎖️</span>
+    <div>
+      <strong>Understand Your Interviewer:</strong> Ian Stewart has progressed through every level of the cyber operations stack — from U.S. Army Chief Warrant Officer 3 (Cyber Operations Planner) to CSIRT Lead to Threat Intel Manager to Threat Operations Director to Senior Director of Cyber Counterintelligence &amp; Investigations. He has deep operational intelligence background (military), forensic rigor (investigation manager), and strategic perspective (director-level). His questions will test whether you think like an investigator and strategist, not just a responder. He'll want to know: Can you manage the bridge between technical forensics and legal/compliance requirements? Can you think in terms of evidence, attribution, and long-term program building? He values precision, evidence-based thinking, and discipline.
+    </div>
+  </div>
+
+  <!-- SESSION 1: Practice Questions -->
+  <div class="time-block d7">
+    <div class="time-label">Session 1 · 60 minutes — Practice Questions for Ian Stewart</div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>Q1: How would you ensure forensic evidence is admissible in legal proceedings?</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <p><strong>Why Ian is asking:</strong> He needs to know you understand the difference between "finding evidence" and "evidence that holds up in court." Forensics is worthless if it's inadmissible.</p>
+          <p><strong>Strong Answer Framework:</strong></p>
+          <ol>
+            <li><strong>Chain of Custody:</strong> "From the moment evidence is collected, I'd document every person who handles it, when, why, and for how long. Evidence is stored in a secure location with access logs. If anyone touches it, that's documented with timestamp and reason. If the chain is broken, opposing counsel will argue the evidence is tainted."</li>
+            <li><strong>Write Blockers &amp; Forensic Imaging:</strong> "For disk evidence, I'd use a write blocker to ensure we don't accidentally modify the evidence drive. The forensic image is the actual evidence; the original drive is secured. I'd hash both with MD5/SHA-256 and document the hash in the chain of custody. If the hash matches at trial, it proves the evidence wasn't modified."</li>
+            <li><strong>Methodology &amp; Documentation:</strong> "I'd use industry-standard tools (EnCase, FTK, X-Ways, or open-source Sleuth Kit). Each step of analysis is documented with screenshots, logs, and explanations. Methodology is written down so a court can understand what was done and why."</li>
+            <li><strong>Expert Witness Readiness:</strong> "I'd prepare the forensic examiner to testify. They need certification (GCFE, EnCE) and ability to explain methodology in plain language. They must be able to defend findings against opposing expert."</li>
+            <li><strong>Privilege Considerations:</strong> "If the investigation is directed by in-house counsel or external counsel, the forensic report is attorney-client privileged and harder for opposing counsel to obtain. I'd coordinate with Legal from the start."</li>
+          </ol>
+          <p><strong>Bridge to Elson's Background:</strong> "In application engineering, we had quality assurance processes — every release documented, every change tracked, able to prove what we deployed and when. Forensics is the same: meticulous documentation so that evidence can be defended as reliable."</p>
+          <p><strong>What NOT to say:</strong> "We'll just collect the evidence and figure out the chain of custody later." (Too late — evidence is contaminated.) "We'll use whatever tools we have." (Non-standard tools will be questioned in court.)</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>Q2: Tell me about the relationship between incident response and investigations. Where do they overlap and diverge?</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <p><strong>Why Ian is asking:</strong> He works with Ernest Covell (IR Director) and needs to understand if you see them as separate functions or an integrated process. This tests strategic thinking.</p>
+          <p><strong>Strong Answer Framework:</strong></p>
+          <p><strong>Overlap:</strong></p>
+          <ul>
+            <li>"Both IR and investigations need evidence preservation. In IR, we preserve evidence for containment decisions. In investigations, we preserve evidence for legal outcomes. From day 1, we're thinking about chain of custody."</li>
+            <li>"Both require forensic analysis. IR forensics answer 'What happened? How do we stop it?' Investigations forensics answer 'What happened, how did it happen, and who did it?'"</li>
+            <li>"Both involve cross-functional coordination. IR coordinates with ops (shut down systems), network (isolate), and application teams. Investigations coordinate with Legal, HR, Compliance, and Privacy."</li>
+          </ul>
+          <p><strong>Divergence:</strong></p>
+          <ul>
+            <li><strong>Timeline:</strong> "IR operates on hours-to-days timeline. Speed is essential; we can't let the breach continue. Investigations operate on weeks-to-months timeline. Thoroughness is essential; we can't miss evidence that would be needed in court."</li>
+            <li><strong>Decision Standard:</strong> "IR uses operational judgment: 'We think the threat is in this system, so we isolate it.' Investigations use evidence standard: 'We've collected evidence proving the threat was in this system on this date.'"</li>
+            <li><strong>Scope:</strong> "IR focuses on current compromise. Investigations look backwards and forwards: What happened before? How long was the attacker there? What data was accessed? Investigations also look forward: What evidence supports prosecution or civil judgment?"</li>
+          </ul>
+          <p><strong>Centene-Specific Scenario:</strong> "Let's say ransomware hits Centene. Day 1: IR team (Ernest's team) detects ransomware, begins containment. Day 2: Investigations team (your team) begins forensic analysis of how the attacker got in. Day 3: IR has contained the ransomware; we're restoring systems. Investigations is still gathering evidence on attack vector, dwell time, data accessed. Day 7: IR is complete. Investigations delivers forensic report to Legal. Legal contacts FBI. Evidence will be used for criminal investigation, civil litigation, and OCR breach investigation."</p>
+          <p><strong>Bridge to Elson's Background:</strong> "In product engineering, we had development (ship features fast) and quality assurance (verify everything works). They operate on different timelines but need to integrate. IR and investigations are similar — both critical, both operate on different cadences, but both drive from the same incident."</p>
+          <p><strong>What NOT to say:</strong> "IR and investigations are the same thing." (They're not.) "We do investigations after IR is done." (Parallel is better; you lose evidence if you wait.)</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>Q3: How would you investigate a situation where an employee is accessing PHI they shouldn't?</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <p><strong>Why Ian is asking:</strong> Insider threat is healthcare's biggest threat. He wants to see if you understand both technical investigation and legal/HR nuances.</p>
+          <p><strong>Strong Answer Framework:</strong></p>
+          <ol>
+            <li><strong>Detection:</strong> "We'd identify unusual access patterns: a nurse accessing records of patients they don't treat, someone accessing celebrity or coworker records (snooping), access outside normal hours, mass downloads. UEBA (user behavior analytics) tools flag these patterns."</li>
+            <li><strong>Quiet Investigation:</strong> "We start quietly — no alerts to the employee. We gather evidence: access logs, file access history, network activity. We document what data was accessed and when. We don't assume guilt yet; we're gathering facts."</li>
+            <li><strong>Legal &amp; HR Coordination:</strong> "I'd immediately brief Legal and HR. We determine: Is this a security violation? A conduct issue? A potential crime? Legal advises on evidence preservation. HR advises on employment implications and union rights (if unionized)."</li>
+            <li><strong>Evidence Preservation:</strong> "We preserve: employee email, file access logs, system activity, endpoint logs. We coordinate with IT to prevent log overwriting. We maintain chain of custody."</li>
+            <li><strong>Subject Interview:</strong> "When we have sufficient evidence, we interview the employee. Approach: neutral, not accusatory. 'We've noticed activity in your account. Can you explain?' We document their response. If union rep is needed, that's coordinated with HR."</li>
+            <li><strong>Outcome &amp; Remediation:</strong> "Findings determine outcome: confirmed malicious insider (termination + possible law enforcement referral), negligent behavior (retraining + enhanced monitoring), misunderstanding (clarify access requirements). We implement remediation: additional training, access restriction, system changes to prevent recurrence."</li>
+          </ol>
+          <p><strong>HIPAA &amp; Legal Nuances:</strong> "In healthcare, this is sensitive because PHI is involved. HIPAA minimum necessary principle means we only look at data we need to investigate. We don't broadly search the employee's email; we search for evidence of unauthorized access. When we share findings, we minimize PHI in the report. Also, if the employee is attempting to report a HIPAA violation (whistleblower), termination could expose us to retaliation claims."</p>
+          <p><strong>Bridge to Elson's Background:</strong> "In product management, we dealt with performance issues. You investigate objectively, get the facts, involve the right stakeholders (manager, HR), and make a decision based on evidence. Insider threat investigations are the same framework."</p>
+          <p><strong>What NOT to say:</strong> "We'd immediately terminate the employee." (Premature; you might be wrong. Also legal risk.) "We'd tell the employee's manager first." (Risks tipping off the employee. Go through proper channels: Legal, Security, HR.)</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>Q4: What's your experience with threat intelligence? How would you use it to prioritize IR efforts?</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <p><strong>Why Ian is asking:</strong> CTI informs threat operations. He wants to see you think strategically about where threats are coming from and how that shapes IR priorities.</p>
+          <p><strong>Strong Answer Framework:</strong></p>
+          <ul>
+            <li><strong>CTI Foundation:</strong> "Threat intelligence tells us who's attacking the healthcare sector, what tools they use, what techniques they employ, and who they're targeting. MITRE ATT&amp;CK framework maps these techniques. Diamond Model helps us understand the adversary-capability-infrastructure-victim relationship."</li>
+            <li><strong>Threat Actor Profiling:</strong> "We monitor threat groups actively targeting healthcare. Example: LockBit is known to conduct reconnaissance before ransomware deployment. They often exploit RDP, Exchange, and VPN. If threat intel alerts us to LockBit activity, we know to look for those initial access vectors."</li>
+            <li><strong>Feeding Threat Intel into SOC/IR:</strong> "Threat intel team provides feeds to SOC: 'Here are IPs and domains associated with LockBit.' SOC tunes detection rules. IR team pre-positions playbooks: 'If LockBit is detected, do X containment steps.' When an incident occurs, we're ready."</li>
+            <li><strong>Prioritization Example:</strong> "Let's say we have 10 security alerts: 3 potential malware, 2 brute-force attempts, 5 policy violations. Threat intel helps us prioritize. If threat intel says 'We're in a LockBit active campaign,' we prioritize the brute-force attempts (LockBit's likely entry vector) over the policy violations."</li>
+            <li><strong>Healthcare-Specific Feeds:</strong> "We subscribe to Health-ISAC (Healthcare ISAC) for healthcare-specific threat feeds. We monitor CISA advisories for healthcare threats. We share indicators with peer health systems through FIRST (our CSIRT registration). We monitor ransomware gang leak sites to see if our members appear."</li>
+          </ul>
+          <p><strong>Bridge to Elson's Background:</strong> "In product engineering, we used customer intelligence to prioritize the roadmap. 'What do customers need? What are competitors doing? What's the market trend?' Threat intelligence serves the same function in IR — it tells you where to focus limited resources and where threats are heading."</p>
+          <p><strong>What NOT to say:</strong> "We respond to alerts as they come." (Reactive; better to be proactive.) "Threat intel isn't my area." (Ian leads threat ops; he expects understanding of CTI.)</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>Q5: How would you handle an investigation involving both technical forensics and a potential employee termination?</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <p><strong>Why Ian is asking:</strong> This tests coordination across technical and HR/legal domains. Can you manage that complexity?</p>
+          <p><strong>Strong Answer Framework:</strong></p>
+          <ol>
+            <li><strong>Dual-Track Approach:</strong> "Technical investigation and HR process run in parallel, but coordinated. We don't wait for forensics to be complete before HR moves. We move fast on both tracks."</li>
+            <li><strong>Evidence Gathering (Technical):</strong> "Security gathers technical evidence: employee's file access, email, system activity. We collect evidence quietly, maintain chain of custody in case this escalates to law enforcement. We preserve all evidence (backups, snapshots) to support HR and/or legal proceedings."</li>
+            <li><strong>HR Process (Parallel):</strong> "HR initiates their investigation: employee interview, reference checks, performance review, background check follow-up. HR and Security coordinate on timing of interview (we don't want to alert the employee if we're still gathering technical evidence)."</li>
+            <li><strong>Legal Coordination:</strong> "Legal advises on both tracks: evidence preservation for potential criminal liability, and employment law considerations (documentation requirements, union rights, potential wrongful termination claims). Legal also advises on privilege (is the investigation privileged?)."</li>
+            <li><strong>Interview Sequencing:</strong> "Ideally, technical evidence is solid before we interview the employee. That way, we can ask informed questions and detect discrepancies. Example: 'Our logs show you downloaded customer database on March 15. Can you explain?' Employee's response is more likely to be truthful if they know we have evidence."</li>
+            <li><strong>Documentation Throughout:</strong> "Every step is documented: findings, decision points, coordination with HR/Legal, interview notes, evidence timestamps. In case of wrongful termination lawsuit, this documentation is critical."</li>
+            <li><strong>Outcome &amp; Remediation:</strong> "Findings determine outcome: confirmed malicious insider = termination + potential law enforcement referral (fraud, theft of trade secrets); negligent behavior = retraining + enhanced monitoring; misunderstanding = clarification + no action."</li>
+          </ol>
+          <p><strong>Legal Landmines to Avoid:</strong> "We have to be careful not to retaliate against whistleblowers (if employee reported HIPAA violation). We have to honor union rights (if unionized). We have to avoid discrimination claims (termination must be based on behavior, not protected status). Documentation is our protection against all of these."</p>
+          <p><strong>Bridge to Elson's Background:</strong> "Managing a product launch requires coordinating engineering, marketing, legal, and compliance — all moving in parallel, all needing to align. Insider threat investigations are similar: technical, HR, and legal all moving in parallel, needing to stay coordinated and document everything."</p>
+          <p><strong>What NOT to say:</strong> "We'd wait for forensics to complete before HR moves." (Slow; evidence might be destroyed.) "HR and Security do their own investigations independently." (Risks miscommunication and legal exposure.)</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>Q6: What role does eDiscovery play in your incident response program?</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <p><strong>Why Ian is asking:</strong> In healthcare, breaches trigger lawsuits. eDiscovery is often overlooked by IR folks. He wants to see if you understand the full lifecycle.</p>
+          <p><strong>Strong Answer Framework:</strong></p>
+          <ul>
+            <li><strong>Incident → Litigation Pipeline:</strong> "A breach doesn't end at IR. Once a breach is announced, we anticipate lawsuits and regulatory investigations. eDiscovery becomes relevant on day 1, even if litigation doesn't start until months later."</li>
+            <li><strong>Legal Hold Trigger:</strong> "When a breach is confirmed, Legal issues a legal hold immediately. This suspends normal data retention/deletion policies. We preserve: incident response reports, forensic findings, communication about the breach, security audit reports, vulnerability assessments, incident timelines."</li>
+            <li><strong>eDiscovery in the Breach Context:</strong> "eDiscovery identifies all data relevant to litigation. In a breach: When did we detect it? When did we notify? What was our response? What was our negligence? eDiscovery pulls from breach notifications, IR reports, Legal memos, board minutes, insurance claims."</li>
+            <li><strong>Healthcare Specificity:</strong> "In healthcare, breach litigation often focuses on: When did Centene know? What did they do? Was the response adequate? eDiscovery pulls all evidence on these questions. Also, OCR investigation (HIPAA) triggers eDiscovery-like data requests."</li>
+            <li><strong>EDRM Framework:</strong> "eDiscovery follows the 9-stage EDRM: identification of custodians and data sources, preservation via legal hold, collection (pulling emails, documents, logs), processing (dedupe, removing non-responsive data), review (attorneys mark privileged data), analysis (identify key documents), and production to opposing counsel."</li>
+            <li><strong>From IR Perspective:</strong> "As IR leader, I ensure our forensic reports and incident timelines are clear and accurate. They'll end up in eDiscovery production. I also ensure we don't overshare: confidential vulnerability information or threat intel shared only with appropriate parties."</li>
+          </ul>
+          <p><strong>Real-World Impact:</strong> "If we respond to a breach sloppily — miss evidence, don't document timeline, destroy logs — that sloppiness gets exposed in eDiscovery. Opposing counsel will argue: 'See? Centene didn't even investigate properly. Imagine their security posture.' Conversely, thorough IR translates to credible eDiscovery: 'We detected quickly, responded systematically, documented everything.'"</p>
+          <p><strong>Bridge to Elson's Background:</strong> "In product launches, documentation matters. If regulatory questions your process, you pull docs to show what you did. eDiscovery is similar: your IR documentation becomes evidence in litigation. Write it like you're talking to a lawyer."</p>
+          <p><strong>What NOT to say:</strong> "eDiscovery is Legal's problem, not IR's." (Wrong; IR documentation feeds eDiscovery.) "We'll handle eDiscovery after litigation starts." (Too late; evidence has been destroyed or lost.)</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>Q7: How do you approach attribution during an incident? When do you bring in external resources?</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-body">
+          <p><strong>Why Ian is asking:</strong> Attribution is hard and expensive. He wants to see if you understand when it's worth the effort and when to call in specialists.</p>
+          <p><strong>Strong Answer Framework:</strong></p>
+          <ul>
+            <li><strong>Attribution Pyramid (Low to High Confidence):</strong> "I start at the base of the pyramid: IoCs (IPs, domains, hashes). These are useful for detection but unreliable for attribution (threat actors fake indicators to confuse). Moving up: TTPs (tactics, techniques, procedures). 'This attack used living-off-the-land binaries and lateral movement via SMB' is more reliable than IoCs. Higher: Threat actor profile — combine TTPs, tools, targets, and language to match a known threat actor. Highest: Official attribution from law enforcement or government intelligence."</li>
+            <li><strong>Centene-Specific Example:</strong> "In a ransomware attack: Day 1, we identify ransomware family via hash (low confidence). Day 2, we analyze TTPs: double encryption, off-hours activity, RDP brute-force (moderate confidence, matches LockBit). Day 3, we find ransom demand in attacker's portal; attacker identifies as LockBit (high confidence). Day 5, FBI confirms based on infrastructure analysis (very high confidence)."</li>
+            <li><strong>Attribution Cost-Benefit:</strong> "Attribution takes time and resources. I ask: Does attribution affect our response? If we're certain it's LockBit vs. BlackCat, does our containment change? Usually no. So we invest attribution effort where it matters: law enforcement coordination, threat intel sharing, insurance claims."</li>
+            <li><strong>When to Engage External Forensics:</strong> "I bring in Mandiant, CrowdStrike, or similar if: (1) In-house capacity is overwhelmed (thousands of systems, weeks of analysis); (2) Expertise gap (unfamiliar malware family or attack vector); (3) Law enforcement requests coordination (FBI prefers major firms); (4) Litigation requires expert witness (external firm adds credibility); (5) Speed is critical (external firm has more resources). Cost: $500–$2000/hour. Insurance may cover some costs."</li>
+            <li><strong>Healthcare Threat Landscape:</strong> "Healthcare is targeted by ransomware groups (LockBit, BlackCat), insiders seeking to sell PHI, and (less likely) nation-states interested in TRICARE data. Knowing which is attacking changes our response posture: ransomware → focus on containment; insider → focus on evidence collection; nation-state → escalate to law enforcement + FBI."</li>
+          </ul>
+          <p><strong>Bridge to Elson's Background:</strong> "In product engineering, you know when to build features in-house and when to buy/partner. Attribution is similar: know when to develop expertise internally and when to call specialists."</p>
+          <p><strong>What NOT to say:</strong> "We'll attribute every attack to high confidence." (Unrealistic; attribution is hard.) "We never involve external firms." (Cost-ineffective; external firms have real expertise.)</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>Q8: Describe how you would build a threat-informed defense program from the ground up.</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <p><strong>Why Ian is asking:</strong> This is a strategic, program-building question. He's testing whether you can think beyond individual incidents to systemic improvement. This also relates to Centene's maturity — they likely have opportunity to improve detection and threat operations.</p>
+          <p><strong>Strong Answer Framework:</strong></p>
+          <ol>
+            <li><strong>Define "Threat-Informed Defense":</strong> "A program where threat intelligence informs all aspects of defensive posture — detection rules, IR playbooks, vulnerability prioritization, red teaming. Instead of defending reactively, we understand threat actors targeting us and pre-position defenses."</li>
+            <li><strong>Phase 1: Assess Current State</strong>
+              <ul>
+                <li>"Catalog threat actors targeting healthcare (ransomware, insiders, nation-states if TRICARE is in scope)."</li>
+                <li>"Map their typical attack vectors: RDP brute-force, phishing, supply chain, insider access abuse, zero-day exploitation."</li>
+                <li>"Assess current detection coverage: Can we detect RDP brute-force? Phishing? Unusual data access? Gaps = prioritization targets."</li>
+                <li>"Inventory current tools: SIEM (Centene uses Microsoft Sentinel), EDR, DLP, UEBA. Gaps in capability = tool/process improvements."</li>
+              </ul>
+            </li>
+            <li><strong>Phase 2: Set Measurable Targets</strong>
+              <ul>
+                <li>"Establish KPIs: Dwell time (how long until detection?), MTTR (mean time to respond), detection coverage (% of MITRE ATT&amp;CK techniques we can detect)."</li>
+                <li>"Example: 'Today, our dwell time for ransomware is 45 days. Target: 7 days. Today, we detect 30% of MITRE techniques. Target: 75% in Year 1.'"</li>
+              </ul>
+            </li>
+            <li><strong>Phase 3: Build Detection Engineering on MITRE ATT&amp;CK</strong>
+              <ul>
+                <li>"Use MITRE ATT&amp;CK framework to map threat actor techniques. Example: LockBit uses T1021 'Remote Service Session Initiation' (RDP). We design detection: 'Alert on RDP brute-force from external IPs.'"</li>
+                <li>"Iterate: develop signature → test on historical data → tune false-positive rate → deploy to SIEM → SOC monitors → feedback."</li>
+                <li>"Coverage grows over time: today we detect T1021 (RDP), next we detect T1566 (phishing), next we detect T1078 (valid account abuse)."</li>
+              </ul>
+            </li>
+            <li><strong>Phase 4: Integrate CTI into SOC Workflows</strong>
+              <ul>
+                <li>"Threat intel team publishes weekly reports: 'LockBit actively scanning healthcare for Exchange vulnerabilities.' SOC reads this, increases monitoring for Exchange activity."</li>
+                <li>"CTI feeds operational alerts to SOC: new malware samples, C2 infrastructure, phishing campaigns. SOC imports these into SIEM."</li>
+              </ul>
+            </li>
+            <li><strong>Phase 5: Purple Team &amp; Adversary Emulation</strong>
+              <ul>
+                <li>"Work with red team to emulate threat actors. Run LockBit-like scenarios: 'How would LockBit attack our environment?' Identify detection gaps."</li>
+                <li>"Conduct tabletop exercises: 'It's 2 AM. We detect LockBit encryption in progress. What do we do?' Test IR processes."</li>
+              </ul>
+            </li>
+            <li><strong>Phase 6: Continuous Improvement</strong>
+              <ul>
+                <li>"After each incident, ask: 'Did our detections catch this? If not, why? Can we improve?'"</li>
+                <li>"Threat landscape changes. New threat actors emerge. New techniques appear. Continuously update MITRE-based detections."</li>
+              </ul>
+            </li>
+          </ol>
+          <p><strong>Bridge to Elson's Background:</strong> "Building a threat-informed program is exactly what you did in application engineering. Assess current state, set measurable targets, build features to close gaps, iterate based on feedback. Same framework, applied to threat operations."</p>
+          <p><strong>Timeline &amp; Roadmap:</strong> "Year 1: Assess and build foundation (20 core detections, establish CTI-SOC integration). Year 2: Expand coverage (50+ detections, purple teaming, hunting programs). Year 3: Optimize and scale (advanced analytics, machine learning, industry leadership)."</p>
+          <p><strong>What NOT to say:</strong> "We'll buy a tool and security will be fixed." (Tools are necessary but not sufficient; you need process and people.) "We'll focus on the latest threats." (Ransomware and insiders are the current threats in healthcare; focus there.)</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SESSION 2: Questions to Ask Ian Stewart -->
+  <div class="time-block d7">
+    <div class="time-label">Session 2 · 45 minutes — Questions to Ask Ian Stewart</div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>8 Smart Questions for Ian Stewart</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <p><strong>Ask these questions to demonstrate preparation and thoughtfulness:</strong></p>
+          <ol>
+            <li><strong>On Counterintelligence Program Maturity:</strong> "How mature is Centene's cyber counterintelligence program? Are there specific gaps you're looking to fill in the next year? I'm thinking about detection maturity, threat hunting capability, or eDiscovery integration." — Shows strategic thinking; asks what he needs.</li>
+            <li><strong>On Forensics Capability:</strong> "What's your current forensic tool stack, and are there capabilities you're looking to expand? For instance, do you have cloud forensics capabilities, or is that an area you're building?" — Shows you understand tooling evolution; relevant to modern healthcare environments with cloud systems.</li>
+            <li><strong>On Team Relationship:</strong> "How do you see the relationship between your team and Ernest Covell's IR team operating? Are there specific handoffs or integration points where you'd like to see improvement?" — Acknowledges his peer relationship with IR; asks how he thinks about integration.</li>
+            <li><strong>On Threat Intelligence Sharing:</strong> "Centene's CSIRT is registered with FIRST. How does that membership inform your threat intelligence strategy? Are there other sharing communities (Health-ISAC, other consortiums) you prioritize?" — Shows you've researched Centene; respects FIRST membership; asks about strategic partnerships.</li>
+            <li><strong>On Healthcare Threat Landscape:</strong> "What threat actors are you most focused on for healthcare right now? I know ransomware groups target healthcare heavily, but are there nation-state or insider threat trends you're seeing that might not be as visible in public threat intelligence?" — Acknowledges his operational intelligence background; asks for his perspective (not just public data).</li>
+            <li><strong>On Legal Coordination:</strong> "How do you see the relationship between your investigations team and Centene's legal team evolving? Are there changes you'd make to streamline evidence handling or breach notification processes?" — Shows you understand legal complexity; asks if there are process improvements he'd advocate for.</li>
+            <li><strong>On Military Background (Respectful):</strong> "Your background in U.S. Army Cyber Operations gives you a unique perspective in the civilian sector. Are there operational disciplines or methodologies from military intelligence that you've brought into Centene's program?" — Acknowledges his military background respectfully; asks about cross-domain learnings (not asking him to "tell war stories").</li>
+            <li><strong>On Team Building &amp; Growth:</strong> "If you were hiring for a new role on your team — someone to lead threat hunting or forensic operations — what would you prioritize? What's the gap you're most looking to fill?" — Forward-thinking; relevant if you're the hire; asks what he needs.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SESSION 3: Interview Cheat Sheet -->
+  <div class="time-block d7">
+    <div class="time-label">Session 3 · 45 minutes — Ian Stewart Interview Cheat Sheet</div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>Key Facts About Ian Stewart</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <ul>
+            <li><strong>Title:</strong> Senior Director, Cyber Counterintelligence &amp; Investigations (currently); previously Director, Threat Operations, Forensics &amp; eDiscovery</li>
+            <li><strong>Career Progression at Centene:</strong> Manager of Cyber Threat Intelligence &amp; Digital Forensics → Manager of Vulnerability Management &amp; Application Security → Cyber Security Lead on CSIRT → Director of Threat Operations → Senior Director of Counterintelligence</li>
+            <li><strong>Military Background:</strong> U.S. Army Chief Warrant Officer 3 (Retired), Cyber Operations Planner; Chief Warrant Officer 2, CPT 188 Cyber Support Squad Leader — 20+ years military intelligence/cyber ops</li>
+            <li><strong>Education:</strong> Bachelor's from Cal State Sacramento, Associate's from Folsom Lake</li>
+            <li><strong>Certifications:</strong> CISSP (Certified Information Systems Security Professional)</li>
+            <li><strong>Skills:</strong> Cisco Technologies, Storage Area Networks, Business Analysis, VMware Server, Cyber Security, Telecommunications</li>
+            <li><strong>Location:</strong> Zephyr Cove, Nevada (indicates preference for remote work or flexibility)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>His Likely Interview Style</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <ul>
+            <li><strong>Precision-Focused:</strong> Will ask for specific details, not generalities. Don't say "We did forensics." Say "We collected disk images using write blockers, hashed them with SHA-256, and documented chain of custody."</li>
+            <li><strong>Evidence-Oriented:</strong> Thinks in terms of facts, not opinions. He may ask, "How do you know?" or "What evidence supports that?" Be ready to back up claims.</li>
+            <li><strong>Operational Discipline:</strong> Military background means he values discipline, process, documentation, and follow-through. Mention processes, not ad-hoc responses.</li>
+            <li><strong>Strategic Perspective:</strong> He's built programs, not just responded to incidents. Expect questions about building capabilities, scaling teams, program maturity.</li>
+            <li><strong>Respectful but Direct:</strong> Military intelligence background means he communicates directly. He's not harsh, but he's straightforward. Match his tone: professional, precise, not overly casual.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>10 Key Phrases/Terms to Have Ready</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <ol>
+            <li><strong>Chain of Custody:</strong> Documentation of every person who handles evidence, when, why, and how. Critical for admissibility.</li>
+            <li><strong>MITRE ATT&amp;CK:</strong> Framework mapping threat actor tactics and techniques. Used for threat-informed defense and detection engineering.</li>
+            <li><strong>Dwell Time:</strong> Time from initial compromise to detection. Lower is better. Industry average is 200+ days; best-in-class is 7-14 days.</li>
+            <li><strong>Threat Intelligence Lifecycle:</strong> Planning → Collection → Processing → Analysis → Dissemination → Feedback. Shows you understand CTI structure.</li>
+            <li><strong>eDiscovery / EDRM:</strong> Litigation support process. Shows you understand breach impact beyond IR.</li>
+            <li><strong>TTPs (Tactics, Techniques, Procedures):</strong> Behavioral patterns of threat actors. More reliable indicator than IoCs (indicators of compromise) alone.</li>
+            <li><strong>UEBA (User &amp; Entity Behavior Analytics):</strong> Machine learning-based detection of anomalous user/system behavior. Key for insider threat detection.</li>
+            <li><strong>Legal Hold:</strong> Directive to preserve evidence for litigation. Suspends normal data retention policies.</li>
+            <li><strong>Attribution Pyramid:</strong> IoCs → TTPs → Threat Actor Profile → Official Attribution. Shows you understand confidence levels in attribution.</li>
+            <li><strong>Incident vs. Investigation Timeline:</strong> IR operates hours-to-days (containment focus); investigations operate weeks-to-months (evidence focus). Parallel processes, different goals.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>5 Things NOT to Say</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <ol>
+            <li><strong>"I don't have direct cybersecurity work experience."</strong> — True, but lead with what you DO have: process discipline, quality rigor, cross-functional coordination. In the answer to questions, bridge from application engineering to cyber operations.</li>
+            <li><strong>"We'll handle forensics after IR is done."</strong> — Wrong mindset. Both should run in parallel from day 1.</li>
+            <li><strong>"We'll figure out evidence preservation once we understand the incident."</strong> — Too late. Evidence preservation is day-1 responsibility.</li>
+            <li><strong>"Attribution doesn't matter; we just need to contain the threat."</strong> — Half-true. Containment is urgent, but attribution informs threat intelligence and informs law enforcement coordination. Both matter.</li>
+            <li><strong>"I've never worked with law enforcement / haven't coordinated investigations with legal."</strong> — If true, acknowledge it and ask questions. Better: "Here's how I'd approach it..." and show understanding of the process.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>How to Bridge Application Engineering → Cyber Investigations/Counterintelligence</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <p><strong>Key Bridge Narrative:</strong></p>
+          <p>"In application engineering, I managed the product lifecycle: understand requirements, prioritize features, build them iteratively, measure success, repeat. I also dealt with quality assurance — documenting processes, ensuring they'd withstand scrutiny, coordinating across teams (engineering, legal, compliance).</p>
+          <p>Cyber counterintelligence and investigations require similar disciplines: understand threat landscape → prioritize defensive measures → build detection/response capabilities → measure effectiveness (dwell time, detection rate) → iterate. And investigations specifically require the same rigor as product quality assurance: document everything, ensure it can withstand legal scrutiny, coordinate across teams (security, legal, HR, compliance).</p>
+          <p>The mindset is transferable. I'm comfortable with cross-functional coordination, process discipline, prioritization under constraints, and building programs from the ground up. The domain knowledge — threat intelligence, forensics tools, HIPAA requirements — I'll learn."</p>
+          <p><strong>Specific Analogies to Use:</strong></p>
+          <ul>
+            <li>"Product roadmap prioritization based on customer data" → "Threat prioritization based on threat intelligence and attack surface risk"</li>
+            <li>"QA testing before release to ensure quality" → "Forensic rigor before submitting evidence to ensure admissibility"</li>
+            <li>"Managing engineering teams and dependencies" → "Coordinating security, legal, HR, and compliance during investigations"</li>
+            <li>"Building scalable processes" → "Building threat-informed detection programs that scale across the organization"</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="expandable">
+      <button class="expand-trigger">
+        <span>The "Military to Corporate" Respect Signal</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="expand-body">
+        <div class="expand-content">
+          <p><strong>How to Acknowledge His Unique Background Without Overstepping:</strong></p>
+          <ul>
+            <li><strong>Respect the Discipline:</strong> "I recognize your military intelligence background brings operational discipline and a different perspective than those of us from the corporate side. I'm curious how you've applied those principles in the corporate environment."</li>
+            <li><strong>Ask Genuine Questions:</strong> "One thing I've always been impressed by is the rigor in military intelligence briefings. How do you translate that rigor to corporate threat briefings?"</li>
+            <li><strong>Acknowledge the Transition:</strong> "The transition from military to corporate is non-trivial. I'd be interested in hearing what's worked well and what's surprised you about the shift."</li>
+            <li><strong>DON'T Overdo It:</strong> Don't ask him to "tell war stories" or make it personal. Keep it professional and focused on how his background applies to the role.</li>
+          </ul>
+          <p><strong>Why This Matters:</strong> Military folks often feel misunderstood in the corporate world. A thoughtful acknowledgment of his background signals respect and gives him an opening to explain how he brings military discipline to civilian operations. This builds rapport.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
 <!-- ═══════════════════ BRIDGE ═══════════════════ -->
 <div class="section container" id="bridge">
   <h2 class="section-title">Bridge Your Experience</h2>
@@ -2352,6 +3732,18 @@
     <div class="flashcard" onclick="this.classList.toggle('flipped')"><div class="fc-q">5W Executive Update Framework?</div><div class="fc-a"><strong>What happened:</strong> factual, no jargon (e.g., "Unauthorized access to cloud storage containing member records"). <strong>What's the impact:</strong> scope, affected data, regulatory exposure. <strong>What are we doing:</strong> containment actions taken. <strong>What do we need:</strong> decisions required from leadership. <strong>What's next:</strong> timeline for updates. Deliver at 1, 4, 12, 24-hour marks. Coordinate across CISO, Legal, Privacy, Compliance, Comms, and Business before each update.</div><span class="fc-hint">click to reveal</span></div>
   </div>
 
+  <h3 style="margin:16px 0 10px;color:var(--text-bright);font-size:0.95rem;">Counterintelligence & Investigations (Day 6-7)</h3>
+  <div class="flashcard-grid">
+    <div class="flashcard" onclick="this.classList.toggle('flipped')"><div class="fc-q">6 stages of the threat intelligence lifecycle?</div><div class="fc-a"><strong>Planning &amp; Direction</strong> (what do we need?) → <strong>Collection</strong> (gather data from sources) → <strong>Processing</strong> (normalize, enrich) → <strong>Analysis</strong> (produce actionable intelligence) → <strong>Dissemination</strong> (deliver to stakeholders) → <strong>Feedback</strong> (did it help? adjust priorities). Continuous cycle, not one-time.</div><span class="fc-hint">click to reveal</span></div>
+    <div class="flashcard" onclick="this.classList.toggle('flipped')"><div class="fc-q">IR vs. cyber investigations — what's the difference?</div><div class="fc-a"><strong>IR:</strong> speed/containment focus, hours-to-days, restore operations, operational audience. <strong>Investigations:</strong> evidence/attribution focus, weeks-to-months, legal outcomes, legal/compliance audience. Both need evidence preservation, but investigations require higher evidentiary standards (admissible in court). Same incident can trigger both simultaneously.</div><span class="fc-hint">click to reveal</span></div>
+    <div class="flashcard" onclick="this.classList.toggle('flipped')"><div class="fc-q">What is EDRM and why does it matter?</div><div class="fc-a"><strong>Electronic Discovery Reference Model.</strong> 9 stages: information governance → identification → preservation → collection → processing → review → analysis → production → presentation. Matters because breaches lead to lawsuits — understanding EDRM helps IR teams prepare evidence for litigation from day one.</div><span class="fc-hint">click to reveal</span></div>
+    <div class="flashcard" onclick="this.classList.toggle('flipped')"><div class="fc-q">What is UEBA and what problem does it solve?</div><div class="fc-a"><strong>User &amp; Entity Behavior Analytics.</strong> ML-based detection of anomalous behavior by establishing baselines and alerting on deviations. Solves the insider threat problem by catching behavioral patterns (not just single events) — e.g., an employee downloading 10x more files than usual at 2 AM before their resignation date.</div><span class="fc-hint">click to reveal</span></div>
+    <div class="flashcard" onclick="this.classList.toggle('flipped')"><div class="fc-q">Attribution pyramid: low to high confidence?</div><div class="fc-a"><strong>IoCs</strong> (IP addresses, hashes — low confidence, easily spoofed) → <strong>TTPs</strong> (behavioral patterns matching known actors — moderate confidence) → <strong>Threat Actor Profile</strong> (consistent pattern across multiple incidents — high confidence) → <strong>Law Enforcement Confirmation</strong> (FBI/intelligence community — very high confidence). Full attribution can take months.</div><span class="fc-hint">click to reveal</span></div>
+    <div class="flashcard" onclick="this.classList.toggle('flipped')"><div class="fc-q">3 types of insider threats?</div><div class="fc-a"><strong>Malicious:</strong> intentional theft, sabotage, espionage (e.g., employee selling PHI). <strong>Negligent:</strong> accidental exposure through carelessness (e.g., emailing PHI to wrong recipient, misconfigured storage). <strong>Compromised:</strong> external actor controls the insider's credentials or device without their knowledge. Healthcare sees all three — negligent is the most common (35% of healthcare breaches involve insiders).</div><span class="fc-hint">click to reveal</span></div>
+    <div class="flashcard" onclick="this.classList.toggle('flipped')"><div class="fc-q">Diamond Model vs. Cyber Kill Chain?</div><div class="fc-a"><strong>Diamond Model:</strong> 4 vertices (adversary, capability, infrastructure, victim). Holistic, relationship-focused, best for attribution and understanding threat actor patterns. <strong>Cyber Kill Chain:</strong> 7 linear phases (recon → weaponize → deliver → exploit → install → C2 → act). Process-focused, best for understanding attack flow and identifying disruption points. Use both together for complete picture.</div><span class="fc-hint">click to reveal</span></div>
+    <div class="flashcard" onclick="this.classList.toggle('flipped')"><div class="fc-q">What is a legal hold?</div><div class="fc-a">A directive to preserve all potentially relevant evidence when litigation is reasonably anticipated. Suspends normal data retention/deletion policies. In healthcare IR: if a breach may lead to lawsuits or OCR investigation, legal hold must be issued immediately to preserve logs, emails, forensic images, and any ESI. Failure to preserve = sanctions, adverse inferences, and spoliation charges.</div><span class="fc-hint">click to reveal</span></div>
+  </div>
+
   <h3 style="margin:16px 0 10px;color:var(--text-bright);font-size:0.95rem;">Centene-Specific</h3>
   <div class="flashcard-grid">
     <div class="flashcard" onclick="this.classList.toggle('flipped')"><div class="fc-q">What is Centene?</div><div class="fc-a">Fortune #23. Largest Medicaid managed care org in the US. $163B+ revenue. 22M covered lives. Operates Health Net Federal Services (TRICARE for DoD — Department of Defense). ISO 27001 certified.</div><span class="fc-hint">click to reveal</span></div>
@@ -2431,6 +3823,31 @@
       <li><div class="check-box" onclick="this.classList.toggle('checked');this.parentElement.querySelector('.cl-text').classList.toggle('checked-text')"></div><span class="cl-text">Can explain HIPAA breach determination (4-factor risk assessment), the 60-day timeline, and why ransomware = automatic breach for PHI</span></li>
       <li><div class="check-box" onclick="this.classList.toggle('checked');this.parentElement.querySelector('.cl-text').classList.toggle('checked-text')"></div><span class="cl-text">Can articulate the containment golden rule (snapshot → isolate → investigate → eradicate → validate) and explain automated vs. human-approved actions</span></li>
       <li><div class="check-box" onclick="this.classList.toggle('checked');this.parentElement.querySelector('.cl-text').classList.toggle('checked-text')"></div><span class="cl-text">Can deliver a 5W executive update (What happened, What's the impact, What are we doing, What do we need, What's next) for a P1 cloud incident</span></li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3><span class="icon">🕵️</span> Day 6 — Counterintelligence & Investigations (~3 hrs)</h3>
+    <ul class="checklist">
+      <li><div class="check-box" onclick="this.classList.toggle('checked');this.parentElement.querySelector('.cl-text').classList.toggle('checked-text')"></div><span class="cl-text">Know the threat intelligence lifecycle (planning, collection, processing, analysis, dissemination, feedback)</span></li>
+      <li><div class="check-box" onclick="this.classList.toggle('checked');this.parentElement.querySelector('.cl-text').classList.toggle('checked-text')"></div><span class="cl-text">Can explain IR vs. investigations divergence (timeline, evidence standard, audience, success metrics)</span></li>
+      <li><div class="check-box" onclick="this.classList.toggle('checked');this.parentElement.querySelector('.cl-text').classList.toggle('checked-text')"></div><span class="cl-text">Know the 6-stage digital forensics process (identification, preservation, collection, examination, analysis, reporting)</span></li>
+      <li><div class="check-box" onclick="this.classList.toggle('checked');this.parentElement.querySelector('.cl-text').classList.toggle('checked-text')"></div><span class="cl-text">Understand EDRM's 9 stages and why eDiscovery matters to IR</span></li>
+      <li><div class="check-box" onclick="this.classList.toggle('checked');this.parentElement.querySelector('.cl-text').classList.toggle('checked-text')"></div><span class="cl-text">Can describe insider threat investigation process (quiet investigation → legal/HR coordination → evidence → outcome)</span></li>
+      <li><div class="check-box" onclick="this.classList.toggle('checked');this.parentElement.querySelector('.cl-text').classList.toggle('checked-text')"></div><span class="cl-text">Know what UEBA tools do and why they matter for insider threat detection</span></li>
+      <li><div class="check-box" onclick="this.classList.toggle('checked');this.parentElement.querySelector('.cl-text').classList.toggle('checked-text')"></div><span class="cl-text">Understand legal holds, evidence preservation, and litigation discovery in healthcare context</span></li>
+      <li><div class="check-box" onclick="this.classList.toggle('checked');this.parentElement.querySelector('.cl-text').classList.toggle('checked-text')"></div><span class="cl-text">Know when to engage external forensics firms (Mandiant, CrowdStrike) and law enforcement (FBI, Secret Service, HC3)</span></li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3><span class="icon">🎯</span> Day 7 — Ian Stewart Interview Prep (~2.5 hrs)</h3>
+    <ul class="checklist">
+      <li><div class="check-box" onclick="this.classList.toggle('checked');this.parentElement.querySelector('.cl-text').classList.toggle('checked-text')"></div><span class="cl-text">Practiced all 8 Ian Stewart Q&A scenarios out loud</span></li>
+      <li><div class="check-box" onclick="this.classList.toggle('checked');this.parentElement.querySelector('.cl-text').classList.toggle('checked-text')"></div><span class="cl-text">Can bridge application engineering experience to investigations/counterintelligence mindset</span></li>
+      <li><div class="check-box" onclick="this.classList.toggle('checked');this.parentElement.querySelector('.cl-text').classList.toggle('checked-text')"></div><span class="cl-text">Know Ian Stewart's background (military CW3, CISSP, career progression from CSIRT Lead to Senior Director)</span></li>
+      <li><div class="check-box" onclick="this.classList.toggle('checked');this.parentElement.querySelector('.cl-text').classList.toggle('checked-text')"></div><span class="cl-text">Have 3-4 smart questions ready specifically for Ian Stewart</span></li>
+      <li><div class="check-box" onclick="this.classList.toggle('checked');this.parentElement.querySelector('.cl-text').classList.toggle('checked-text')"></div><span class="cl-text">Know the 10 key phrases and 5 things NOT to say from the cheat sheet</span></li>
+      <li><div class="check-box" onclick="this.classList.toggle('checked');this.parentElement.querySelector('.cl-text').classList.toggle('checked-text')"></div><span class="cl-text">Review Centene's Cyber Threat Fusion Center model and FIRST membership</span></li>
+      <li><div class="check-box" onclick="this.classList.toggle('checked');this.parentElement.querySelector('.cl-text').classList.toggle('checked-text')"></div><span class="cl-text">Understand the relationship between Ian's team (CI/Investigations) and Ernest's team (IR/DFIR)</span></li>
     </ul>
   </div>
   <div class="card">
